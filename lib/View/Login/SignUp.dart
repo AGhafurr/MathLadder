@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'SignUp.dart';
+import 'package:math_ladder/View/Login/LoginPage.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignUpPage> createState() => _SignUpPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    "LOGIN",
+                    "SIGN UP",
                     textAlign: TextAlign.left,
                     style: TextStyle(
                         fontSize: 30,
@@ -42,6 +42,24 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
               SizedBox(height: 10),
+              TextField(
+                decoration: InputDecoration(
+                  labelText: 'Username',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide.none,
+                  ),
+                ),
+              ),
+              SizedBox(height: 25),
               TextField(
                 decoration: InputDecoration(
                   labelText: 'Email',
@@ -98,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                           borderRadius: BorderRadius.circular(20))),
                 ),
                 child: Text(
-                  "LOGIN",
+                  "SIGNUP",
                   style: TextStyle(
                     color: Color(0xffFDFDFD),
                     fontSize: 20,
@@ -106,47 +124,13 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              TextButton(onPressed: () {}, child: Text("Forgot?")),
               SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ElevatedButton(
-                    onPressed: () async {},
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.transparent),
-                      elevation: MaterialStateProperty.all<double>(0),
-                    ),
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/Google.png'),
-                      ],
-                    ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.transparent),
-                      elevation: MaterialStateProperty.all<double>(0),
-                    ),
-                    child: Column(
-                      children: [
-                        Image.asset('assets/images/Guest.png'),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
                   Text(
-                    "Don't have an account?",
+                    "Have an account?",
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 13,
@@ -158,11 +142,11 @@ class _LoginPageState extends State<LoginPage> {
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) {
-                          return SignUpPage();
+                          return LoginPage();
                         }));
                       },
                       child: Text(
-                        "Sign Up",
+                        "Login",
                         style: TextStyle(
                           color: Color(0xffF75050),
                           fontSize: 13,

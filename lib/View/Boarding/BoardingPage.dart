@@ -60,9 +60,10 @@ class _BoardingPageState extends State<BoardingPage> {
         child: Text(
           "Next",
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
             fontSize: 16,
             fontFamily: 'Vollkorn',
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),

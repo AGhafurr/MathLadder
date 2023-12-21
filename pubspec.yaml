@@ -61,6 +61,9 @@ flutter:
     - assets/images/boarding1.png
     - assets/images/boarding2.png
     - assets/images/boarding3.png
+    - assets/images/login.png
+    - assets/images/Google.png
+    - assets/images/Guest.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
