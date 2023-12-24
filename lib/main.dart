@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 import 'providers/auth_provider.dart';
 import 'features/boarding/boarding_screen.dart';
-import 'features/home/home_screem.dart';
+import 'features/home/home_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +37,9 @@ class MyApp extends StatelessWidget {
         title: 'Math Ladder',
         theme: ThemeData(
           useMaterial3: true,
+          scaffoldBackgroundColor: const Color(0xffEDF6FF),
         ),
+        debugShowCheckedModeBanner: false,
         home: authProvider.session == null
             ? const BoardingScreen()
             : const HomeScreen(),

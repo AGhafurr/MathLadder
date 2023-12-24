@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import '../../home/home_screen.dart';
 import '../../../providers/auth_provider.dart';
 import '../sign_up/sign_up_screen.dart';
 
@@ -27,7 +27,7 @@ class _SignInScreenState extends State<SignInScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                const SizedBox(height: 50),
+                const SizedBox(height: 30),
                 Image.asset(
                   "assets/images/login.png",
                   height: 240,
@@ -91,7 +91,19 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 40),
+                const SizedBox(height: 10),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    "Forgot Password?",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                      fontFamily: 'Vollkorn',
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
                 TextButton(
                   onPressed: () {
                     authProvider.signIn(
@@ -129,11 +141,37 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ),
                 ),
-                TextButton(
-                  onPressed: () {},
-                  child: const Text("Forgot?"),
+                const SizedBox(height: 30),
+                const Row(
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        color: Colors.black, // Warna garis
+                        thickness:
+                            1, // Ketebalan garis (sesuaikan dengan kebutuhan)
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Text(
+                        "Or Sign In With",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 13,
+                          fontFamily: 'Vollkorn',
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Divider(
+                        color: Colors.black, // Warna garis
+                        thickness:
+                            1, // Ketebalan garis (sesuaikan dengan kebutuhan)
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -152,7 +190,14 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return const HomeScreen();
+                          }),
+                        );
+                      },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
                             Colors.transparent),
@@ -166,7 +211,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,

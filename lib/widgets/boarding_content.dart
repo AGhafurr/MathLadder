@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../features/auth/sign_in/sign_in_screen.dart';
 
 class BoardingContent extends StatelessWidget {
   final String imagePath;
@@ -59,8 +60,12 @@ class BoardingContent extends StatelessWidget {
               children: <Widget>[
                 TextButton(
                   onPressed: () {
-                    // Aksi saat tombol "Skip" ditekan
-                    // Misalnya: Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => NextPage()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return const SignInScreen();
+                      }),
+                    );
                   },
                   child: const Text(
                     "Skip",
