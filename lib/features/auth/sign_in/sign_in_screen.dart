@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../home/home_screen.dart';
 import '../../../providers/auth_provider.dart';
 import '../sign_up/sign_up_screen.dart';
+import '../../home/navbar.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
@@ -177,7 +178,14 @@ class _SignInScreenState extends State<SignInScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     ElevatedButton(
-                      onPressed: () async {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return const Navbar();
+                          }),
+                        );
+                      },
                       style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
                             Colors.transparent),

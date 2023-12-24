@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 import 'providers/auth_provider.dart';
 import 'features/boarding/boarding_screen.dart';
-import 'features/home/home_screen.dart';
+import 'features/home/navbar.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: authProvider.session == null
             ? const BoardingScreen()
-            : const HomeScreen(),
+            : const Navbar(),
       );
     });
   }
