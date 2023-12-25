@@ -1,17 +1,23 @@
+// ignore: avoid_web_libraries_in_flutter
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../../providers/auth_provider.dart';
+import '../../features/gamePage/game_page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
-  Widget _buildCustomButton(String text) {
+  Widget _buildCustomButton(BuildContext context, text, Widget page) {
     return SizedBox(
       width: 330,
       height: 70,
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return page;
+          }));
+        },
         style: ButtonStyle(
           fixedSize: MaterialStateProperty.all<Size>(
             const Size(330, 70),
@@ -157,25 +163,32 @@ class HomeScreen extends StatelessWidget {
                           ],
                         ),
                         const SizedBox(height: 20),
-                        _buildCustomButton("NOVICE"),
+                        _buildCustomButton(context, "NOVICE", const GamePage()),
                         const SizedBox(height: 20),
-                        _buildCustomButton("BEGINNER"),
+                        _buildCustomButton(
+                            context, "BEGINNER", const GamePage()),
                         const SizedBox(height: 20),
-                        _buildCustomButton("LEARNER"),
+                        _buildCustomButton(
+                            context, "LEARNER", const GamePage()),
                         const SizedBox(height: 20),
-                        _buildCustomButton("APPRENTICE"),
+                        _buildCustomButton(
+                            context, "APPRENTICE", const GamePage()),
                         const SizedBox(height: 20),
-                        _buildCustomButton("INTERMEDIATE"),
+                        _buildCustomButton(
+                            context, "INTERMEDIATE", const GamePage()),
                         const SizedBox(height: 20),
-                        _buildCustomButton("PROFICIENCE"),
+                        _buildCustomButton(
+                            context, "PROFICIENCE", const GamePage()),
                         const SizedBox(height: 20),
-                        _buildCustomButton("ADVANCED"),
+                        _buildCustomButton(
+                            context, "ADVANCED", const GamePage()),
                         const SizedBox(height: 20),
-                        _buildCustomButton("EXPERT"),
+                        _buildCustomButton(context, "EXPERT", const GamePage()),
                         const SizedBox(height: 20),
-                        _buildCustomButton("MASTER"),
+                        _buildCustomButton(context, "MASTER", const GamePage()),
                         const SizedBox(height: 20),
-                        _buildCustomButton("VIRTUOS"),
+                        _buildCustomButton(
+                            context, "VIRTUOS", const GamePage()),
                         const SizedBox(height: 20),
                       ],
                     ),

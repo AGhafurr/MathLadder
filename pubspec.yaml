@@ -69,6 +69,12 @@ flutter:
     - assets/images/Google.png
     - assets/images/Guest.png
     - assets/images/profile.png
+    - assets/images/dice_1.png
+    - assets/images/dice_2.png
+    - assets/images/dice_3.png
+    - assets/images/dice_4.png
+    - assets/images/dice_5.png
+    - assets/images/dice_6.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
