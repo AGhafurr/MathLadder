@@ -38,6 +38,9 @@ class _ProfilePageState extends State<ProfilePage> {
               fontFamily: 'Vollkorn',
             ),
           ),
+          leading: Container(
+              margin: const EdgeInsets.only(left: 16),
+              child: Image.asset("assets/images/login.png")),
         ),
         body: Center(
           child: Padding(

@@ -34,9 +34,10 @@ class _GamePageState extends State<GamePage> {
 
   List<Widget> buildBoard() {
     List<Widget> rows = [];
-    for (int i = 0; i < 8; i++) {
+    for (int i = 7; i >= 0; i--) {
       List<Widget> squares = [];
       for (int j = 0; j < 8; j++) {
+        final index = i * 8 + j;
         squares.add(
           Container(
             width: 46.9,
@@ -44,9 +45,9 @@ class _GamePageState extends State<GamePage> {
             decoration: BoxDecoration(
               border: Border.all(color: Colors.blue, width: 1),
             ),
-            child: (i * 8 + j) == redPawnPosition
+            child: (index == redPawnPosition)
                 ? const Icon(Icons.circle, color: Colors.red, size: 20)
-                : ((i * 8 + j) == bluePawnPosition
+                : ((index == bluePawnPosition)
                     ? const Icon(Icons.circle, color: Colors.blue, size: 20)
                     : null),
           ),

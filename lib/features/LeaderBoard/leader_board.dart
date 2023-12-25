@@ -38,6 +38,9 @@ class _LeaderBoardState extends State<LeaderBoard> {
             fontFamily: 'Vollkorn',
           ),
         ),
+        leading: Container(
+            margin: const EdgeInsets.only(left: 16),
+            child: Image.asset("assets/images/login.png")),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),
@@ -117,7 +120,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                             ),
                             SizedBox(width: 100),
                             Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 SizedBox(height: 40),
                                 Text(

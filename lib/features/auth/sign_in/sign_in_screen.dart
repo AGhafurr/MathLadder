@@ -28,12 +28,12 @@ class _SignInScreenState extends State<SignInScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                const SizedBox(height: 30),
+                const SizedBox(height: 90),
                 Image.asset(
                   "assets/images/login.png",
-                  height: 240,
+                  height: 99,
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 90),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[

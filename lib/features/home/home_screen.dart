@@ -75,6 +75,9 @@ class HomeScreen extends StatelessWidget {
               fontFamily: 'Vollkorn',
             ),
           ),
+          leading: Container(
+              margin: const EdgeInsets.only(left: 16),
+              child: Image.asset("assets/images/login.png")),
         ),
         body: SingleChildScrollView(
           child: Center(
