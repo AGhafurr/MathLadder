@@ -82,9 +82,14 @@ class HomeScreen extends StatelessWidget {
                     child: Center(
                       child: Container(
                         alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: const Color(0xffFFFFFF),
-                          borderRadius: BorderRadius.circular(15),
+                        decoration: const BoxDecoration(
+                          color: Color(0xffFFFFFF),
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(30),
+                            topRight: Radius.circular(30),
+                            bottomLeft: Radius.circular(0),
+                            bottomRight: Radius.circular(30),
+                          ),
                         ),
                         child: const Padding(
                           padding: EdgeInsets.all(8.0),
@@ -160,29 +165,17 @@ class HomeScreen extends StatelessWidget {
                         const SizedBox(height: 20),
                         _buildCustomButton("APPRENTICE"),
                         const SizedBox(height: 20),
-                        _buildCustomButton("LEARNER"),
+                        _buildCustomButton("INTERMEDIATE"),
                         const SizedBox(height: 20),
-                        _buildCustomButton("LEARNER"),
+                        _buildCustomButton("PROFICIENCE"),
                         const SizedBox(height: 20),
-                        _buildCustomButton("LEARNER"),
+                        _buildCustomButton("ADVANCED"),
                         const SizedBox(height: 20),
-                        _buildCustomButton("LEARNER"),
+                        _buildCustomButton("EXPERT"),
                         const SizedBox(height: 20),
-                        _buildCustomButton("LEARNER"),
+                        _buildCustomButton("MASTER"),
                         const SizedBox(height: 20),
-                        _buildCustomButton("LEARNER"),
-                        const SizedBox(height: 20),
-                        IconButton(
-                          icon: const Icon(
-                            Icons.exit_to_app_outlined,
-                            color: Colors.red,
-                          ),
-                          iconSize: 36,
-                          onPressed: () {
-                            authProvider.signOut();
-                          },
-                          color: Colors.black,
-                        ),
+                        _buildCustomButton("VIRTUOS"),
                         const SizedBox(height: 20),
                       ],
                     ),

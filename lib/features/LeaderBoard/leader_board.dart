@@ -55,7 +55,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                 child: TextField(
                   controller: _searchController,
                   decoration: const InputDecoration(
-                    hintText: 'Cari...',
+                    hintText: 'Find your rival ......',
                     prefixIcon: Icon(Icons.search),
                     border: InputBorder.none,
                     contentPadding: EdgeInsets.symmetric(vertical: 10),
@@ -65,83 +65,219 @@ class _LeaderBoardState extends State<LeaderBoard> {
               ),
             ),
             const SizedBox(height: 20),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                      child: const Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Column(
-                            children: [
-                              Text(
-                                'Username 2',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(height: 8),
-                              CircleAvatar(
-                                backgroundImage: NetworkImage('url_to_image_1'),
-                                radius: 40,
-                              ),
-                              Text('Point Juara 1'),
-                            ],
-                          ),
-                          SizedBox(width: 20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Username 1',
-                                style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(height: 8),
-                              CircleAvatar(
-                                backgroundImage: NetworkImage('url_to_image_2'),
-                                radius: 40,
-                              ),
-                              Text('Point Juara 2'),
-                            ],
-                          ),
-                          SizedBox(width: 20),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                'Username 3',
-                                style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(height: 8),
-                              CircleAvatar(
-                                backgroundImage: NetworkImage('url_to_image_3'),
-                                radius: 40,
-                              ),
-                              Text('Point Juara 3'),
-                            ],
-                          ),
-                          SizedBox(height: 20),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
+            Center(
+              child: Column(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: const Column(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 20),
+                            Text(
+                              'Username 1',
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(height: 8),
+                            CircleAvatar(
+                              backgroundImage: NetworkImage('url_to_image_2'),
+                              radius: 40,
+                            ),
+                            Text('Point Juara 2'),
+                          ],
+                        ),
+                        SizedBox(height: 20),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Column(
+                              children: [
+                                Text(
+                                  'Username 2',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(height: 8),
+                                CircleAvatar(
+                                  backgroundImage:
+                                      NetworkImage('url_to_image_1'),
+                                  radius: 40,
+                                ),
+                                Text('Point Juara 1'),
+                              ],
+                            ),
+                            SizedBox(width: 100),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                SizedBox(height: 40),
+                                Text(
+                                  'Username 3',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(height: 8),
+                                CircleAvatar(
+                                  backgroundImage:
+                                      NetworkImage('url_to_image_3'),
+                                  radius: 40,
+                                ),
+                                Text('Point Juara 3'),
+                              ],
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 20),
+                      ],
+                    ),
+                  )
+                ],
               ),
             ),
             const SizedBox(height: 20),
-            const Expanded(
+            Expanded(
               child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Text("Isi Halaman Leader Board"),
-                    // Isi halaman Leader Board lainnya disini
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Column(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(25),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment
+                                .spaceBetween, // Menggunakan MainAxisAlignment.spaceBetween
+                            children: [
+                              Text(
+                                "4. Rangga Ferdinand",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 15,
+                                  fontFamily: 'Vollkorn',
+                                ),
+                              ),
+                              Text(
+                                "500 point",
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 15,
+                                  fontFamily: 'Vollkorn',
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(25),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment
+                                .spaceBetween, // Menggunakan MainAxisAlignment.spaceBetween
+                            children: [
+                              Text(
+                                "5. Ivan Ally",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 15,
+                                  fontFamily: 'Vollkorn',
+                                ),
+                              ),
+                              Text(
+                                "450 point",
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 15,
+                                  fontFamily: 'Vollkorn',
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(25),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment
+                                .spaceBetween, // Menggunakan MainAxisAlignment.spaceBetween
+                            children: [
+                              Text(
+                                "6. Akmall",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 15,
+                                  fontFamily: 'Vollkorn',
+                                ),
+                              ),
+                              Text(
+                                "420 point",
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 15,
+                                  fontFamily: 'Vollkorn',
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: const Padding(
+                          padding: EdgeInsets.all(25),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment
+                                .spaceBetween, // Menggunakan MainAxisAlignment.spaceBetween
+                            children: [
+                              Text(
+                                "7. Ekyy ",
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 15,
+                                  fontFamily: 'Vollkorn',
+                                ),
+                              ),
+                              Text(
+                                "340 point",
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 15,
+                                  fontFamily: 'Vollkorn',
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
