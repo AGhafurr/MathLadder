@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../providers/auth_provider.dart';
 import '../../features/gamePage/game_page.dart';
+import '../gamePage/winner_page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -169,7 +170,7 @@ class HomeScreen extends StatelessWidget {
                         _buildCustomButton(context, "NOVICE", const GamePage()),
                         const SizedBox(height: 20),
                         _buildCustomButton(
-                            context, "BEGINNER", const GamePage()),
+                            context, "BEGINNER", const WinnerPage()),
                         const SizedBox(height: 20),
                         _buildCustomButton(
                             context, "LEARNER", const GamePage()),
