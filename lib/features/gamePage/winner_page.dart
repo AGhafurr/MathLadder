@@ -52,6 +52,7 @@ class _WinnerPageState extends State<WinnerPage> {
                   fontFamily: 'Vollkorn',
                 ),
               ),
+              const SizedBox(height: 10),
               const Text(
                 "you answered very quickly!",
                 style: TextStyle(
