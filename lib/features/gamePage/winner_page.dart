@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../home/home_screen.dart';
 
 class WinnerPage extends StatefulWidget {
   const WinnerPage({super.key});
@@ -163,7 +164,12 @@ class _WinnerPageState extends State<WinnerPage> {
               ),
               const SizedBox(height: 80),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                  );
+                },
                 style: ButtonStyle(
                   fixedSize: MaterialStateProperty.all<Size>(
                     const Size(280, 50),
