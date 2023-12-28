@@ -48,16 +48,171 @@ class _GamePageState extends State<GamePage> {
       context: context,
       barrierDismissible: false,
       builder: (context) => AlertDialog(
-        title: Text('Pertanyaan Kotak $boxNumber'),
-        content: Text('Ini adalah pertanyaan untuk kotak nomor $boxNumber.'),
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            child: const Text('OK'),
+        title: Text(
+          'Quiz BOX $boxNumber',
+          textAlign: TextAlign.center,
+        ),
+        content: Container(
+          decoration: const BoxDecoration(
+              color: Color(0xffFE9696),
+              borderRadius: BorderRadius.all(Radius.circular(10))),
+          padding: const EdgeInsets.all(15),
+          child: Text(
+            'Ini adalah pertanyaan untuk kotak nomor $boxNumber.',
+            style: const TextStyle(
+              fontSize: 24,
+              color: Colors.white,
+            ),
           ),
+        ),
+
+        actions: [
+          Row(
+            children: [
+              const Expanded(child: SizedBox()),
+              TextButton(
+                onPressed: () {
+                  // Logika saat memilih pilihan 1
+                  Navigator.of(context).pop();
+                },
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                    const EdgeInsets.all(10),
+                  ),
+                  backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+                    (Set<MaterialState> states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return const Color(0xffFFFFFF);
+                      }
+                      return const Color(0xff6FA6FF);
+                    },
+                  ),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                ),
+                child: const Text(
+                  'Pilihan 1',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ), // Ganti teks sesuai kebutuhan
+              ),
+              const Expanded(child: SizedBox()),
+              TextButton(
+                onPressed: () {
+                  // Logika saat memilih pilihan 1
+                  Navigator.of(context).pop();
+                },
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                    const EdgeInsets.all(10),
+                  ),
+                  backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+                    (Set<MaterialState> states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return const Color(0xffFFFFFF);
+                      }
+                      return const Color(0xff6FA6FF);
+                    },
+                  ),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                ),
+                child: const Text(
+                  'Pilihan 2',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ), // Ganti teks sesuai kebutuhan
+              ),
+              const Expanded(child: SizedBox()),
+            ],
+          ),
+          const SizedBox(height: 20),
+          Row(
+            children: [
+              const Expanded(child: SizedBox()),
+              TextButton(
+                onPressed: () {
+                  // Logika saat memilih pilihan 1
+                  Navigator.of(context).pop();
+                },
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                    const EdgeInsets.all(10),
+                  ),
+                  backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+                    (Set<MaterialState> states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return const Color(0xffFFFFFF);
+                      }
+                      return const Color(0xff6FA6FF);
+                    },
+                  ),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                ),
+                child: const Text(
+                  'Pilihan 3',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ), // Ganti teks sesuai kebutuhan
+              ),
+              const Expanded(child: SizedBox()),
+              TextButton(
+                onPressed: () {
+                  // Logika saat memilih pilihan 1
+                  Navigator.of(context).pop();
+                },
+                style: ButtonStyle(
+                  padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                    const EdgeInsets.all(10),
+                  ),
+                  backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+                    (Set<MaterialState> states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return const Color(0xffFFFFFF);
+                      }
+                      return const Color(0xff6FA6FF);
+                    },
+                  ),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                ),
+                child: const Text(
+                  'Pilihan 4',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                ), // Ganti teks sesuai kebutuhan
+              ),
+              const Expanded(child: SizedBox()),
+            ],
+          )
         ],
+        // Gaya AlertDialog
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        backgroundColor: Colors.white,
+        elevation: 10,
       ),
     );
   }
@@ -128,7 +283,10 @@ class _GamePageState extends State<GamePage> {
                 ),
               ),
             ),
-            child: const Text('OK'),
+            child: const Text(
+              'OK',
+              style: TextStyle(color: Colors.white, fontSize: 18),
+            ),
           ),
         ],
       ),
