@@ -1,30 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:provider/provider.dart';
+import 'package:get/get.dart';
 
-import 'providers/auth_provider.dart';
-import 'features/boarding/boarding_screen.dart';
+import 'controllers/auth_controller.dart';
 import 'features/home/navbar.dart';
+import 'features/boarding/boarding_screen.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load(fileName: '.env');
-  final supabase = await Supabase.initialize(
-    url: '${dotenv.env['SUPABASE_URL']}',
-    anonKey: '${dotenv.env['SUPABASE_ANON_KEY']}',
-  );
-
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (context) => AuthProvider(supabase.client),
-        ),
-      ],
-      child: const MyApp(),
-    ),
-  );
+void main() async {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -32,18 +14,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<AuthProvider>(builder: (context, authProvider, child) {
-      return MaterialApp(
-        title: 'Math Ladder',
-        theme: ThemeData(
-          useMaterial3: true,
-          scaffoldBackgroundColor: const Color(0xffEDF6FF),
-        ),
-        debugShowCheckedModeBanner: false,
-        home: authProvider.session == null
-            ? const BoardingScreen()
-            : const Navbar(),
-      );
-    });
+    final authController = Get.put(AuthController());
+
+    return MaterialApp(
+      title: 'Math Ladder',
+      theme: ThemeData(
+        useMaterial3: true,
+        scaffoldBackgroundColor: const Color(0xffEDF6FF),
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Obx(() {
+        return authController.isLoggedIn.value
+            ? const Navbar()
+            : const BoardingScreen();
+      }),
+    );
   }
 }

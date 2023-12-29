@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../features/auth/sign_in/sign_in_screen.dart';
 
 class BoardingContent extends StatelessWidget {
