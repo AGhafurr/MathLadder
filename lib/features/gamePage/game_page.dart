@@ -1,16 +1,29 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'dart:async';
 import 'dart:math';
 import 'package:math_ladder/features/gamePage/winner_page.dart';
 
 class GamePage extends StatefulWidget {
-  const GamePage({Key? key}) : super(key: key);
+  final String dificuty;
+
+  const GamePage({Key? key, required this.dificuty}) : super(key: key);
+
+  Future<Map<String, dynamic>> loadQuestions() async {
+    final String questionsJson =
+        await rootBundle.loadString('assets/datas/questions.json');
+    Map<String, dynamic> questions = json.decode(questionsJson);
+    return questions;
+  }
 
   @override
   State<GamePage> createState() => _GamePageState();
 }
 
 class _GamePageState extends State<GamePage> {
+  var loadedQuestions = [];
   int diceNumber = 1;
   int pawnPosition = 0;
   int winningPosition = 63;
@@ -18,11 +31,43 @@ class _GamePageState extends State<GamePage> {
   bool diceClicked = false;
   int timerValue = 0;
   late Timer _timer;
+  int index = 0;
+  List<int> randomNumbers = [];
 
   @override
   void initState() {
     super.initState();
     generateQuestionBoxes();
+    loadQuestions();
+  }
+
+  List<int> generateRandomNumbers(int count) {
+    final random = Random();
+
+    while (randomNumbers.length < count) {
+      int randomNumber =
+          random.nextInt(35); // Ubah batas menjadi 35 sesuai dengan kebutuhan
+      if (!randomNumbers.contains(randomNumber)) {
+        setState(() {
+          randomNumbers.add(randomNumber);
+        });
+      }
+    }
+
+    return randomNumbers;
+  }
+
+  Future<void> loadQuestions() async {
+    Map<String, dynamic> questions = await widget.loadQuestions();
+    var selectedDificulty = widget.dificuty == 'Beginner'
+        ? questions['questions']['beginner']
+        : widget.dificuty == 'Intermediate'
+            ? questions['questions']['intermediate']
+            : questions['questions']['advance'];
+    setState(() {
+      loadedQuestions = selectedDificulty;
+    });
+    print(loadedQuestions);
   }
 
   void generateQuestionBoxes() {
@@ -57,7 +102,7 @@ class _GamePageState extends State<GamePage> {
               borderRadius: BorderRadius.all(Radius.circular(10))),
           padding: const EdgeInsets.all(15),
           child: Text(
-            'Ini adalah pertanyaan untuk kotak nomor $boxNumber.',
+            '${loadedQuestions[randomNumbers[index]]['question']}',
             style: const TextStyle(
               fontSize: 24,
               color: Colors.white,
@@ -214,6 +259,10 @@ class _GamePageState extends State<GamePage> {
         elevation: 10,
       ),
     );
+
+    setState(() {
+      index++;
+    });
   }
 
   void rollDice() {
@@ -298,11 +347,16 @@ class _GamePageState extends State<GamePage> {
       pawnPosition = 0;
       diceClicked = false;
       timerValue = 0;
+      index = 0;
     });
     _timer.cancel();
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const GamePage()),
+      MaterialPageRoute(
+        builder: (context) => const GamePage(
+          dificuty: "Beginner",
+        ),
+      ),
     );
   }
 

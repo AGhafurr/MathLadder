@@ -62,7 +62,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - .env
     - assets/images/boarding1.png
     - assets/images/boarding2.png
     - assets/images/boarding3.png
@@ -80,6 +79,7 @@ flutter:
     - assets/images/point.png
     - assets/images/time.png
     - assets/images/camera.png
+    - assets/datas/questions.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
