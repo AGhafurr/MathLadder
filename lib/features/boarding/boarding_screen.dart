@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../widgets/boarding_content.dart';
 import '../auth/sign_in/sign_in_screen.dart';
 
-final List<Widget> _pages = [
+final List _pages = <Widget>[
   const BoardingContent(
     imagePath: "assets/images/boarding1.png",
     title: "ArithmoQues",

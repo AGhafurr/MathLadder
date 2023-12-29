@@ -1,13 +1,43 @@
-// ignore: avoid_web_libraries_in_flutter
-
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../../providers/auth_provider.dart';
+import 'package:get/get.dart';
+
+import '../../controllers/auth_controller.dart';
 import '../../features/gamePage/game_page.dart';
 import '../gamePage/winner_page.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final authController = Get.put(AuthController());
+
+  String formatTimeDifference(String rawDate) {
+    DateTime dateTime = DateTime.parse(rawDate);
+    DateTime now = DateTime.now();
+
+    Duration difference = now.difference(dateTime);
+
+    if (difference.inDays >= 365) {
+      int years = (difference.inDays / 365).floor();
+      return '$years ${years == 1 ? 'year' : 'years'} ago';
+    } else if (difference.inDays >= 30) {
+      int months = (difference.inDays / 30).floor();
+      return '$months ${months == 1 ? 'month' : 'months'} ago';
+    } else if (difference.inDays >= 7) {
+      int weeks = (difference.inDays / 7).floor();
+      return '$weeks ${weeks == 1 ? 'week' : 'weeks'} ago';
+    } else if (difference.inHours >= 1) {
+      return '${difference.inHours} ${difference.inHours == 1 ? 'hour' : 'hours'} ago';
+    } else if (difference.inMinutes >= 1) {
+      return '${difference.inMinutes} ${difference.inMinutes == 1 ? 'minute' : 'minutes'} ago';
+    } else {
+      return 'just now';
+    }
+  }
 
   Widget _buildCustomButton(BuildContext context, text, Widget page) {
     return SizedBox(
@@ -51,158 +81,161 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<AuthProvider>(builder: (context, authProvider, child) {
-      return Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: const Color(0xffFFFFFF),
-          automaticallyImplyLeading: false,
-          actions: [
-            IconButton(
-              icon: const Icon(
-                Icons.question_mark_outlined,
-                color: Color(0xff6FA6FF),
-              ),
-              iconSize: 36,
-              onPressed: () {},
-              color: Colors.black,
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: const Color(0xffFFFFFF),
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+            icon: const Icon(
+              Icons.question_mark_outlined,
+              color: Color(0xff6FA6FF),
             ),
-          ],
-          title: const Text(
-            "Hai Username",
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 13,
-              fontFamily: 'Vollkorn',
-            ),
+            iconSize: 36,
+            onPressed: () {},
+            color: Colors.black,
           ),
-          leading: Container(
-              margin: const EdgeInsets.only(left: 16),
-              child: Image.asset("assets/images/login.png")),
+        ],
+        title: const Text(
+          "Hai Username",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 13,
+            fontFamily: 'Vollkorn',
+          ),
         ),
-        body: SingleChildScrollView(
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(45),
-                    child: Center(
-                      child: Container(
-                        alignment: Alignment.center,
-                        decoration: const BoxDecoration(
-                          color: Color(0xffFFFFFF),
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(30),
-                            topRight: Radius.circular(30),
-                            bottomLeft: Radius.circular(0),
-                            bottomRight: Radius.circular(30),
-                          ),
+        leading: Container(
+            margin: const EdgeInsets.only(left: 16),
+            child: Image.asset("assets/images/login.png")),
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(45),
+                  child: Center(
+                    child: Container(
+                      alignment: Alignment.center,
+                      decoration: const BoxDecoration(
+                        color: Color(0xffFFFFFF),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(30),
+                          topRight: Radius.circular(30),
+                          bottomLeft: Radius.circular(0),
+                          bottomRight: Radius.circular(30),
                         ),
-                        child: const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.end,
-                                children: [
-                                  Text(
-                                    "1,876",
-                                    style: TextStyle(
-                                      color: Color(0xff6FA6FF),
-                                      fontSize: 68,
-                                      fontFamily: 'Vollkorn',
-                                    ),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Obx(() {
+                                  return authController.user['id'] == null
+                                      ? Text('0')
+                                      : Text(
+                                          '${authController.user['points']['point']}',
+                                          style: TextStyle(
+                                            color: Color(0xff6FA6FF),
+                                            fontSize: 68,
+                                            fontFamily: 'Vollkorn',
+                                          ),
+                                        );
+                                }),
+                                SizedBox(width: 10),
+                                Text(
+                                  "Point",
+                                  style: TextStyle(
+                                    color: Color(0xff6FA6FF),
+                                    fontSize: 14,
+                                    fontFamily: 'Vollkorn',
                                   ),
-                                  SizedBox(width: 10),
-                                  Text(
-                                    "Point",
-                                    style: TextStyle(
-                                      color: Color(0xff6FA6FF),
-                                      fontSize: 14,
-                                      fontFamily: 'Vollkorn',
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 10),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "last score 2 hours ago",
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 15,
-                                      fontFamily: 'Vollkorn',
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 10),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Obx(() {
+                                  return authController.user['id'] == null
+                                      ? const Text('')
+                                      : Text(
+                                          '${formatTimeDifference(authController.user['points']['created_at'])}',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 15,
+                                            fontFamily: 'Vollkorn',
+                                          ),
+                                        );
+                                }),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 30),
-                    child: Column(
-                      children: [
-                        const Row(
-                          children: [
-                            Text(
-                              "Grade",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 25,
-                                fontFamily: 'Vollkorn',
-                              ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  child: Column(
+                    children: [
+                      const Row(
+                        children: [
+                          Text(
+                            "Grade",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 25,
+                              fontFamily: 'Vollkorn',
                             ),
-                          ],
-                        ),
-                        const SizedBox(height: 20),
-                        _buildCustomButton(context, "NOVICE", const GamePage()),
-                        const SizedBox(height: 20),
-                        _buildCustomButton(
-                            context, "BEGINNER", const WinnerPage()),
-                        const SizedBox(height: 20),
-                        _buildCustomButton(
-                            context, "LEARNER", const GamePage()),
-                        const SizedBox(height: 20),
-                        _buildCustomButton(
-                            context, "APPRENTICE", const GamePage()),
-                        const SizedBox(height: 20),
-                        _buildCustomButton(
-                            context, "INTERMEDIATE", const GamePage()),
-                        const SizedBox(height: 20),
-                        _buildCustomButton(
-                            context, "PROFICIENCE", const GamePage()),
-                        const SizedBox(height: 20),
-                        _buildCustomButton(
-                            context, "ADVANCED", const GamePage()),
-                        const SizedBox(height: 20),
-                        _buildCustomButton(context, "EXPERT", const GamePage()),
-                        const SizedBox(height: 20),
-                        _buildCustomButton(context, "MASTER", const GamePage()),
-                        const SizedBox(height: 20),
-                        _buildCustomButton(
-                            context, "VIRTUOS", const GamePage()),
-                        const SizedBox(height: 20),
-                      ],
-                    ),
-                  )
-                ],
-              ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 20),
+                      _buildCustomButton(context, "NOVICE", const GamePage()),
+                      const SizedBox(height: 20),
+                      _buildCustomButton(
+                          context, "BEGINNER", const WinnerPage()),
+                      const SizedBox(height: 20),
+                      _buildCustomButton(context, "LEARNER", const GamePage()),
+                      const SizedBox(height: 20),
+                      _buildCustomButton(
+                          context, "APPRENTICE", const GamePage()),
+                      const SizedBox(height: 20),
+                      _buildCustomButton(
+                          context, "INTERMEDIATE", const GamePage()),
+                      const SizedBox(height: 20),
+                      _buildCustomButton(
+                          context, "PROFICIENCE", const GamePage()),
+                      const SizedBox(height: 20),
+                      _buildCustomButton(context, "ADVANCED", const GamePage()),
+                      const SizedBox(height: 20),
+                      _buildCustomButton(context, "EXPERT", const GamePage()),
+                      const SizedBox(height: 20),
+                      _buildCustomButton(context, "MASTER", const GamePage()),
+                      const SizedBox(height: 20),
+                      _buildCustomButton(context, "VIRTUOS", const GamePage()),
+                      const SizedBox(height: 20),
+                    ],
+                  ),
+                )
+              ],
             ),
           ),
         ),
-      );
-    });
+      ),
+    );
   }
 }
