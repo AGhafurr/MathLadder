@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'dart:async';
 import 'dart:math';
 import 'package:math_ladder/features/gamePage/winner_page.dart';
@@ -31,8 +32,8 @@ class _GamePageState extends State<GamePage> {
   bool diceClicked = false;
   int timerValue = 0;
   late Timer _timer;
-  int index = 0;
   List<int> randomNumbers = [];
+  String yourAnswer = '';
 
   @override
   void initState() {
@@ -41,20 +42,9 @@ class _GamePageState extends State<GamePage> {
     loadQuestions();
   }
 
-  List<int> generateRandomNumbers(int count) {
+  int generateRandomNumber() {
     final random = Random();
-
-    while (randomNumbers.length < count) {
-      int randomNumber =
-          random.nextInt(35); // Ubah batas menjadi 35 sesuai dengan kebutuhan
-      if (!randomNumbers.contains(randomNumber)) {
-        setState(() {
-          randomNumbers.add(randomNumber);
-        });
-      }
-    }
-
-    return randomNumbers;
+    return random.nextInt(32);
   }
 
   Future<void> loadQuestions() async {
@@ -88,6 +78,8 @@ class _GamePageState extends State<GamePage> {
   }
 
   void showQuestionDialog(int boxNumber) {
+    int index = generateRandomNumber();
+
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -102,7 +94,7 @@ class _GamePageState extends State<GamePage> {
               borderRadius: BorderRadius.all(Radius.circular(10))),
           padding: const EdgeInsets.all(15),
           child: Text(
-            '${loadedQuestions[randomNumbers[index]]['question']}',
+            '${loadedQuestions[index]['question']}',
             style: const TextStyle(
               fontSize: 24,
               color: Colors.white,
@@ -116,8 +108,57 @@ class _GamePageState extends State<GamePage> {
               const Expanded(child: SizedBox()),
               TextButton(
                 onPressed: () {
-                  // Logika saat memilih pilihan 1
-                  Navigator.of(context).pop();
+                  setState(() {
+                    yourAnswer = loadedQuestions[index]['options']['a'];
+                  });
+                  if (yourAnswer == loadedQuestions[index]['answer']) {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Jawaban Benar'),
+                          content: Text('Maju $diceNumber langkah'),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Ok'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                    setState(() {
+                      pawnPosition = (pawnPosition + diceNumber) % 64;
+                    });
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Jawaban Salah'),
+                          content: Text('Mundur $diceNumber langkah'),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Ok'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                    setState(() {
+                      pawnPosition = (pawnPosition - diceNumber) % 64;
+                    });
+                  }
+                  setState(() {
+                    yourAnswer = '';
+                  });
                 },
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
@@ -137,8 +178,8 @@ class _GamePageState extends State<GamePage> {
                     ),
                   ),
                 ),
-                child: const Text(
-                  'Pilihan 1',
+                child: Text(
+                  '${loadedQuestions[index]['options']['a']}',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,
@@ -148,8 +189,58 @@ class _GamePageState extends State<GamePage> {
               const Expanded(child: SizedBox()),
               TextButton(
                 onPressed: () {
+                  setState(() {
+                    yourAnswer = loadedQuestions[index]['options']['b'];
+                  });
+                  if (yourAnswer == loadedQuestions[index]['answer']) {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Jawaban Benar'),
+                          content: Text('Maju $diceNumber langkah'),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Ok'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                    setState(() {
+                      pawnPosition = (pawnPosition + diceNumber) % 64;
+                    });
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Jawaban Salah'),
+                          content: Text('Mundur $diceNumber langkah'),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Ok'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                    setState(() {
+                      pawnPosition = (pawnPosition - diceNumber) % 64;
+                    });
+                  }
+                  setState(() {
+                    yourAnswer = '';
+                  });
                   // Logika saat memilih pilihan 1
-                  Navigator.of(context).pop();
                 },
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
@@ -169,8 +260,8 @@ class _GamePageState extends State<GamePage> {
                     ),
                   ),
                 ),
-                child: const Text(
-                  'Pilihan 2',
+                child: Text(
+                  '${loadedQuestions[index]['options']['b']}',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,
@@ -186,8 +277,58 @@ class _GamePageState extends State<GamePage> {
               const Expanded(child: SizedBox()),
               TextButton(
                 onPressed: () {
+                  setState(() {
+                    yourAnswer = loadedQuestions[index]['options']['c'];
+                  });
+                  if (yourAnswer == loadedQuestions[index]['answer']) {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Jawaban Benar'),
+                          content: Text('Maju $diceNumber langkah'),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Ok'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                    setState(() {
+                      pawnPosition = (pawnPosition + diceNumber) % 64;
+                    });
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Jawaban Salah'),
+                          content: Text('Mundur $diceNumber langkah'),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Ok'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                    setState(() {
+                      pawnPosition = (pawnPosition - diceNumber) % 64;
+                    });
+                  }
+                  setState(() {
+                    yourAnswer = '';
+                  });
                   // Logika saat memilih pilihan 1
-                  Navigator.of(context).pop();
                 },
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
@@ -207,8 +348,8 @@ class _GamePageState extends State<GamePage> {
                     ),
                   ),
                 ),
-                child: const Text(
-                  'Pilihan 3',
+                child: Text(
+                  '${loadedQuestions[index]['options']['c']}',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,
@@ -218,8 +359,58 @@ class _GamePageState extends State<GamePage> {
               const Expanded(child: SizedBox()),
               TextButton(
                 onPressed: () {
+                  setState(() {
+                    yourAnswer = loadedQuestions[index]['options']['d'];
+                  });
+                  if (yourAnswer == loadedQuestions[index]['answer']) {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Jawaban Benar'),
+                          content: Text('Maju $diceNumber langkah'),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Ok'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                    setState(() {
+                      pawnPosition = (pawnPosition + diceNumber) % 64;
+                    });
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text('Jawaban Salah'),
+                          content: Text('Mundur $diceNumber langkah'),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                                Navigator.of(context).pop();
+                              },
+                              child: Text('Ok'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                    setState(() {
+                      pawnPosition = (pawnPosition - diceNumber) % 64;
+                    });
+                  }
+                  setState(() {
+                    yourAnswer = '';
+                  });
                   // Logika saat memilih pilihan 1
-                  Navigator.of(context).pop();
                 },
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
@@ -239,8 +430,8 @@ class _GamePageState extends State<GamePage> {
                     ),
                   ),
                 ),
-                child: const Text(
-                  'Pilihan 4',
+                child: Text(
+                  '${loadedQuestions[index]['options']['d']}',
                   style: TextStyle(
                     fontSize: 20,
                     color: Colors.white,
@@ -259,10 +450,6 @@ class _GamePageState extends State<GamePage> {
         elevation: 10,
       ),
     );
-
-    setState(() {
-      index++;
-    });
   }
 
   void rollDice() {
@@ -347,7 +534,6 @@ class _GamePageState extends State<GamePage> {
       pawnPosition = 0;
       diceClicked = false;
       timerValue = 0;
-      index = 0;
     });
     _timer.cancel();
     Navigator.pushReplacement(
