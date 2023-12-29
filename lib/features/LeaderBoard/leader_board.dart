@@ -83,36 +83,36 @@ class _LeaderBoardState extends State<LeaderBoard> {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: 20),
+                            const SizedBox(height: 20),
                             Obx(() {
                               return leaderBoardController.leaderBoard[0]
                                           ['id'] ==
                                       ''
-                                  ? Text('0')
+                                  ? const Text('0')
                                   : Text(
                                       '${leaderBoardController.leaderBoard[0]['users']['username']}',
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.bold),
                                     );
                             }),
-                            SizedBox(height: 8),
-                            CircleAvatar(
+                            const SizedBox(height: 8),
+                            const CircleAvatar(
                               backgroundImage: NetworkImage('url_to_image_2'),
                               radius: 40,
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Obx(() {
                               return leaderBoardController.leaderBoard[0]
                                           ['id'] ==
                                       ''
-                                  ? Text('0')
+                                  ? const Text('0')
                                   : Text(
                                       '${leaderBoardController.leaderBoard[0]['point']}');
                             }),
                           ],
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -122,60 +122,60 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                   return leaderBoardController.leaderBoard[1]
                                               ['id'] ==
                                           ''
-                                      ? Text('username')
+                                      ? const Text('username')
                                       : Text(
                                           '${leaderBoardController.leaderBoard[1]['users']['username']}',
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               fontSize: 20,
                                               fontWeight: FontWeight.bold),
                                         );
                                 }),
-                                SizedBox(height: 8),
-                                CircleAvatar(
+                                const SizedBox(height: 8),
+                                const CircleAvatar(
                                   backgroundImage:
                                       NetworkImage('url_to_image_1'),
                                   radius: 40,
                                 ),
-                                SizedBox(height: 10),
+                                const SizedBox(height: 10),
                                 Obx(() {
                                   return leaderBoardController.leaderBoard[1]
                                               ['id'] ==
                                           ''
-                                      ? Text('0')
+                                      ? const Text('0')
                                       : Text(
                                           '${leaderBoardController.leaderBoard[1]['point']}');
                                 }),
                               ],
                             ),
-                            SizedBox(width: 100),
+                            const SizedBox(width: 100),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                SizedBox(height: 40),
+                                const SizedBox(height: 40),
                                 Obx(() {
                                   return leaderBoardController.leaderBoard[2]
                                               ['id'] ==
                                           ''
-                                      ? Text('')
+                                      ? const Text('')
                                       : Text(
                                           '${leaderBoardController.leaderBoard[2]['users']['username']}',
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               fontSize: 18,
                                               fontWeight: FontWeight.bold),
                                         );
                                 }),
-                                SizedBox(height: 8),
-                                CircleAvatar(
+                                const SizedBox(height: 8),
+                                const CircleAvatar(
                                   backgroundImage:
                                       NetworkImage('url_to_image_3'),
                                   radius: 40,
                                 ),
-                                SizedBox(height: 10),
+                                const SizedBox(height: 10),
                                 Obx(() {
                                   return leaderBoardController.leaderBoard[2]
                                               ['id'] ==
                                           ''
-                                      ? Text('0')
+                                      ? const Text('0')
                                       : Text(
                                           '${leaderBoardController.leaderBoard[2]['point']}',
                                         );
@@ -184,7 +184,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                       ],
                     ),
                   )

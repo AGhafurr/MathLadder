@@ -131,7 +131,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -142,18 +142,18 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: [
                                 Obx(() {
                                   return authController.user['id'] == null
-                                      ? Text('0')
+                                      ? const Text('0')
                                       : Text(
                                           '${authController.user['points']['point']}',
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             color: Color(0xff6FA6FF),
                                             fontSize: 68,
                                             fontFamily: 'Vollkorn',
                                           ),
                                         );
                                 }),
-                                SizedBox(width: 10),
-                                Text(
+                                const SizedBox(width: 10),
+                                const Text(
                                   "Point",
                                   style: TextStyle(
                                     color: Color(0xff6FA6FF),
@@ -163,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -172,7 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ? const Text('')
                                       : Text(
                                           '${formatTimeDifference(authController.user['points']['created_at'])}',
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
                                             fontFamily: 'Vollkorn',

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../controllers/auth_controller.dart';
-import '../home/navbar.dart';
+import './edit_profile_screen.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -106,7 +106,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) {
-                      return const Navbar();
+                      return const EditProfile();
                     }),
                   );
                 },
