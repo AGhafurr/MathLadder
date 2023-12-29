@@ -7,6 +7,7 @@ import 'package:get/get.dart' hide Response, FormData, MultipartFile;
 import 'package:image_picker/image_picker.dart';
 
 class EditProfileController extends GetxController {
+  String ip = '192.168.1.79';
   final dio = Dio();
   Rx<File?> image = Rx<File?>(null);
   XFile? pick;
@@ -48,7 +49,7 @@ class EditProfileController extends GetxController {
     });
 
     var response = await dio.request(
-      'http://192.168.1.205:3000/api/user/update-profile-picture',
+      'http://$ip:3000/api/user/update-profile-picture',
       options: Options(
         method: 'POST',
       ),

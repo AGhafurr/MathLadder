@@ -5,6 +5,7 @@ import 'package:socket_io_client/socket_io_client.dart' as IO;
 import 'package:dio/dio.dart';
 
 class AuthController extends GetxController {
+  String ip = '192.168.1.79';
   late IO.Socket socket;
   final dio = Dio();
   final isLoggedIn = false.obs;
@@ -17,7 +18,7 @@ class AuthController extends GetxController {
   }
 
   void initSocket() {
-    socket = IO.io('http://192.168.1.205:3000', <String, dynamic>{
+    socket = IO.io('http://$ip:3000', <String, dynamic>{
       'autoConnect': false,
       'transports': ['websocket'],
     });
@@ -51,7 +52,7 @@ class AuthController extends GetxController {
     var headers = {'Content-Type': 'application/json'};
     var data = json.encode({"id": id});
     var response = await dio.request(
-      'http://192.168.1.205:3000/api/user/me',
+      'http://$ip:3000/api/user/me',
       options: Options(
         method: 'POST',
         headers: headers,
@@ -79,7 +80,7 @@ class AuthController extends GetxController {
       "password": password,
     });
     var response = await dio.request(
-      'http://192.168.1.205:3000/api/auth/sign-up',
+      'http://$ip:3000/api/auth/sign-up',
       options: Options(
         method: 'POST',
         headers: headers,
@@ -104,7 +105,7 @@ class AuthController extends GetxController {
       "password": password,
     });
     var response = await dio.request(
-      'http://192.168.1.205:3000/api/auth/sign-in',
+      'http://$ip:3000/api/auth/sign-in',
       options: Options(
         method: 'POST',
         headers: headers,
@@ -121,7 +122,7 @@ class AuthController extends GetxController {
 
   Future<void> signOut() async {
     var response = await dio.request(
-      'http://192.168.1.205:3000/api/auth/sign-out',
+      'http://$ip:3000/api/auth/sign-out',
       options: Options(
         method: 'POST',
       ),
