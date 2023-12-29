@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 import 'leader_board_controller.dart';
+import '../Information/information_page.dart';
 
 class LeaderBoard extends StatefulWidget {
   const LeaderBoard({super.key});
@@ -28,7 +28,13 @@ class _LeaderBoardState extends State<LeaderBoard> {
               color: Color(0xff6FA6FF),
             ),
             iconSize: 36,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const InformationPage()),
+              );
+            },
             color: Colors.black,
           ),
         ],
@@ -37,7 +43,8 @@ class _LeaderBoardState extends State<LeaderBoard> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 13,
-            fontFamily: 'Vollkorn',
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.bold,
           ),
         ),
         leading: Container(
@@ -214,7 +221,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 15,
-                                  fontFamily: 'Vollkorn',
+                                  fontFamily: 'Poppins',
                                 ),
                               ),
                               Text(
@@ -222,7 +229,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                 style: TextStyle(
                                   color: Colors.red,
                                   fontSize: 15,
-                                  fontFamily: 'Vollkorn',
+                                  fontFamily: 'Poppins',
                                 ),
                               ),
                             ],
@@ -246,7 +253,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 15,
-                                  fontFamily: 'Vollkorn',
+                                  fontFamily: 'Poppins',
                                 ),
                               ),
                               Text(
@@ -254,7 +261,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                 style: TextStyle(
                                   color: Colors.red,
                                   fontSize: 15,
-                                  fontFamily: 'Vollkorn',
+                                  fontFamily: 'Poppins',
                                 ),
                               ),
                             ],
@@ -270,15 +277,14 @@ class _LeaderBoardState extends State<LeaderBoard> {
                         child: const Padding(
                           padding: EdgeInsets.all(25),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment
-                                .spaceBetween, // Menggunakan MainAxisAlignment.spaceBetween
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 "6. Akmall",
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 15,
-                                  fontFamily: 'Vollkorn',
+                                  fontFamily: 'Poppins',
                                 ),
                               ),
                               Text(
@@ -286,7 +292,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                 style: TextStyle(
                                   color: Colors.red,
                                   fontSize: 15,
-                                  fontFamily: 'Vollkorn',
+                                  fontFamily: 'Poppins',
                                 ),
                               ),
                             ],
@@ -302,15 +308,14 @@ class _LeaderBoardState extends State<LeaderBoard> {
                         child: const Padding(
                           padding: EdgeInsets.all(25),
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment
-                                .spaceBetween, // Menggunakan MainAxisAlignment.spaceBetween
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 "7. Ekyy ",
                                 style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 15,
-                                  fontFamily: 'Vollkorn',
+                                  fontFamily: 'Poppins',
                                 ),
                               ),
                               Text(
@@ -318,7 +323,7 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                 style: TextStyle(
                                   color: Colors.red,
                                   fontSize: 15,
-                                  fontFamily: 'Vollkorn',
+                                  fontFamily: 'Poppins',
                                 ),
                               ),
                             ],

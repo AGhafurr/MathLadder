@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../home/home_screen.dart';
+import '../home/navbar.dart';
 
 class WinnerPage extends StatefulWidget {
   const WinnerPage({super.key});
@@ -23,20 +23,11 @@ class _WinnerPageState extends State<WinnerPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "RED",
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontSize: 35,
-                      fontFamily: 'Vollkorn',
-                    ),
-                  ),
-                  SizedBox(width: 10),
-                  Text(
-                    "WINNER!",
+                    "Congrats!!!",
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 30,
-                      fontFamily: 'Vollkorn',
+                      fontSize: 32,
+                      fontFamily: 'Poppins',
                     ),
                   )
                 ],
@@ -50,7 +41,7 @@ class _WinnerPageState extends State<WinnerPage> {
                 style: TextStyle(
                   color: Color(0xff6FA6FF),
                   fontSize: 34,
-                  fontFamily: 'Vollkorn',
+                  fontFamily: 'Poppins',
                 ),
               ),
               const SizedBox(height: 10),
@@ -59,7 +50,7 @@ class _WinnerPageState extends State<WinnerPage> {
                 style: TextStyle(
                   color: Color(0xff9FAABD),
                   fontSize: 20,
-                  fontFamily: 'Vollkorn',
+                  fontFamily: 'Poppins',
                 ),
               ),
               const SizedBox(height: 20),
@@ -80,7 +71,7 @@ class _WinnerPageState extends State<WinnerPage> {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
-                              fontFamily: 'Vollkorn',
+                              fontFamily: 'Poppins',
                             ),
                           ),
                           Container(
@@ -102,7 +93,7 @@ class _WinnerPageState extends State<WinnerPage> {
                                       style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 20,
-                                        fontFamily: 'Vollkorn',
+                                        fontFamily: 'Poppins',
                                       ),
                                     )
                                   ],
@@ -127,7 +118,7 @@ class _WinnerPageState extends State<WinnerPage> {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
-                              fontFamily: 'Vollkorn',
+                              fontFamily: 'Poppins',
                             ),
                           ),
                           Container(
@@ -150,7 +141,7 @@ class _WinnerPageState extends State<WinnerPage> {
                                       style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 20,
-                                        fontFamily: 'Vollkorn',
+                                        fontFamily: 'Poppins',
                                       ),
                                     )
                                   ],
@@ -167,7 +158,7 @@ class _WinnerPageState extends State<WinnerPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                    MaterialPageRoute(builder: (context) => const Navbar()),
                   );
                 },
                 style: ButtonStyle(
@@ -193,7 +184,7 @@ class _WinnerPageState extends State<WinnerPage> {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
-                    fontFamily: 'Vollkorn',
+                    fontFamily: 'Poppins',
                   ),
                 ),
               ),

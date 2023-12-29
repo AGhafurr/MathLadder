@@ -92,6 +92,9 @@ class _GamePageState extends State<GamePage> {
         title: Text(
           'Quiz BOX $boxNumber',
           textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontFamily: 'Poppins',
+          ),
         ),
         content: Container(
           decoration: const BoxDecoration(
@@ -103,6 +106,7 @@ class _GamePageState extends State<GamePage> {
             style: const TextStyle(
               fontSize: 24,
               color: Colors.white,
+              fontFamily: 'Poppins',
             ),
           ),
         ),
@@ -192,6 +196,7 @@ class _GamePageState extends State<GamePage> {
                   style: const TextStyle(
                     fontSize: 20,
                     color: Colors.white,
+                    fontFamily: 'Poppins',
                   ),
                 ), // Ganti teks sesuai kebutuhan
               ),
@@ -240,7 +245,12 @@ class _GamePageState extends State<GamePage> {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).pop();
                               },
-                              child: const Text('Ok'),
+                              child: const Text(
+                                'Ok',
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                ),
+                              ),
                             ),
                           ],
                         );
@@ -278,6 +288,7 @@ class _GamePageState extends State<GamePage> {
                   style: const TextStyle(
                     fontSize: 20,
                     color: Colors.white,
+                    fontFamily: 'Poppins',
                   ),
                 ), // Ganti teks sesuai kebutuhan
               ),
@@ -306,7 +317,12 @@ class _GamePageState extends State<GamePage> {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).pop();
                               },
-                              child: const Text('Ok'),
+                              child: const Text(
+                                'Ok',
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                ),
+                              ),
                             ),
                           ],
                         );
@@ -368,9 +384,7 @@ class _GamePageState extends State<GamePage> {
                 child: Text(
                   '${loadedQuestions[index]['options']['c']}',
                   style: const TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                  ),
+                      fontSize: 20, color: Colors.white, fontFamily: 'Poppins'),
                 ), // Ganti teks sesuai kebutuhan
               ),
               const Expanded(child: SizedBox()),
@@ -454,9 +468,7 @@ class _GamePageState extends State<GamePage> {
                 child: Text(
                   '${loadedQuestions[index]['options']['d']}',
                   style: const TextStyle(
-                    fontSize: 20,
-                    color: Colors.white,
-                  ),
+                      fontSize: 20, color: Colors.white, fontFamily: 'Poppins'),
                 ), // Ganti teks sesuai kebutuhan
               ),
               const Expanded(child: SizedBox()),
@@ -546,7 +558,11 @@ class _GamePageState extends State<GamePage> {
             ),
             child: const Text(
               'OK',
-              style: TextStyle(color: Colors.white, fontSize: 18),
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 18,
+                fontFamily: 'Poppins',
+              ),
             ),
           ),
         ],

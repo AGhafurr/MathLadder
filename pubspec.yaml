@@ -78,6 +78,7 @@ flutter:
     - assets/images/winner.png
     - assets/images/point.png
     - assets/images/time.png
+    - assets/images/Logo.png
     - assets/images/camera.png
     - assets/datas/questions.json
 
@@ -93,6 +94,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
     - family: Unlock
       fonts:
         - asset: assets/fonts/Unlock-Regular.ttf

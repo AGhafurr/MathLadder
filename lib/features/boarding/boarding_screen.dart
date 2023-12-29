@@ -6,9 +6,9 @@ import '../auth/sign_in/sign_in_screen.dart';
 final List _pages = <Widget>[
   const BoardingContent(
     imagePath: "assets/images/boarding1.png",
-    title: "ArithmoQues",
+    title: "MathLadder",
     description:
-        "Welcome to ArithmoQuest! Prepare to embark on an exhilarating journey through the realm of numbers. Solve puzzles, conquer challenges, and ascend the MathLadder to prove your arithmetic prowess!",
+        "Welcome to MathLadder! Prepare to embark on an exhilarating journey through the realm of numbers. Solve puzzles, conquer challenges, and ascend the MathLadder to prove your arithmetic prowess!",
   ),
   const BoardingContent(
     imagePath: "assets/images/boarding2.png",

@@ -37,7 +37,7 @@ class _NavbarState extends State<Navbar> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person_outline_outlined),
-            label: 'Profil',
+            label: 'Profile',
           ),
         ],
         currentIndex: _selectedIndex,

@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../../controllers/auth_controller.dart';
 import '../../features/gamePage/game_page.dart';
 import '../gamePage/winner_page.dart';
+import '../Information/information_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -64,6 +65,10 @@ class _HomeScreenState extends State<HomeScreen> {
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
+              side: const BorderSide(
+                color: Colors.blue, // Change this color as needed
+                width: 2, // Adjust the width of the border
+              ),
             ),
           ),
         ),
@@ -72,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
           style: const TextStyle(
             color: Colors.black,
             fontSize: 20,
-            fontFamily: 'Vollkorn',
+            fontFamily: 'Poppins',
           ),
         ),
       ),
@@ -93,7 +98,13 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Color(0xff6FA6FF),
             ),
             iconSize: 36,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const InformationPage()),
+              );
+            },
             color: Colors.black,
           ),
         ],
@@ -102,7 +113,8 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 13,
-            fontFamily: 'Vollkorn',
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.bold,
           ),
         ),
         leading: Container(
@@ -148,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           style: const TextStyle(
                                             color: Color(0xff6FA6FF),
                                             fontSize: 68,
-                                            fontFamily: 'Vollkorn',
+                                            fontFamily: 'Poppins',
                                           ),
                                         );
                                 }),
@@ -158,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: TextStyle(
                                     color: Color(0xff6FA6FF),
                                     fontSize: 14,
-                                    fontFamily: 'Vollkorn',
+                                    fontFamily: 'Poppins',
                                   ),
                                 ),
                               ],
@@ -175,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           style: const TextStyle(
                                             color: Colors.black,
                                             fontSize: 15,
-                                            fontFamily: 'Vollkorn',
+                                            fontFamily: 'Poppins',
                                           ),
                                         );
                                 }),
@@ -198,12 +210,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 25,
-                              fontFamily: 'Vollkorn',
+                              fontFamily: 'Poppins',
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 10),
                       _buildCustomButton(context, "NOVICE",
                           const GamePage(dificuty: "Beginner")),
                       const SizedBox(height: 20),

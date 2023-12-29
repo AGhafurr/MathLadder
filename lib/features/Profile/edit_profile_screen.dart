@@ -165,7 +165,7 @@ class _EditProfileState extends State<EditProfile> {
                   style: TextStyle(
                     color: Color(0xffFDFDFD),
                     fontSize: 20,
-                    fontFamily: 'Vollkorn',
+                    fontFamily: 'Poppins',
                   ),
                 ),
               ),
@@ -215,9 +215,7 @@ class _EditProfileState extends State<EditProfile> {
                 child: const Text(
                   'Camera',
                   style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.white,
-                  ),
+                      fontSize: 15, color: Colors.white, fontFamily: 'Poppins'),
                 ), // Ganti teks sesuai kebutuhan
               ),
               const SizedBox(width: 20),
@@ -249,6 +247,7 @@ class _EditProfileState extends State<EditProfile> {
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.white,
+                    fontFamily: 'Poppins',
                   ),
                 ), // Ganti teks sesuai kebutuhan
               ),

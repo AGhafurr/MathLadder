@@ -155,7 +155,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   style: TextStyle(
                     color: Color(0xffFDFDFD),
                     fontSize: 20,
-                    fontFamily: 'Vollkorn',
+                    fontFamily: 'Poppins',
                   ),
                 ),
               ),
@@ -169,8 +169,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 13,
-                      fontFamily: 'Vollkorn',
-                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Poppins',
                     ),
                   ),
                   TextButton(
@@ -187,7 +186,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       style: TextStyle(
                         color: Color(0xffF75050),
                         fontSize: 13,
-                        fontFamily: 'Vollkorn',
+                        fontFamily: 'Poppins',
                         fontWeight: FontWeight.bold,
                       ),
                     ),

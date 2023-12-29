@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../controllers/auth_controller.dart';
 import './edit_profile_screen.dart';
+import '../Information/information_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -28,7 +29,13 @@ class _ProfilePageState extends State<ProfilePage> {
               color: Color(0xff6FA6FF),
             ),
             iconSize: 36,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const InformationPage()),
+              );
+            },
             color: Colors.black,
           ),
         ],
@@ -37,7 +44,8 @@ class _ProfilePageState extends State<ProfilePage> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 13,
-            fontFamily: 'Vollkorn',
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.bold,
           ),
         ),
         leading: Container(
@@ -84,7 +92,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   textAlign: TextAlign.left,
                   style: const TextStyle(
                     fontSize: 25,
-                    fontFamily: 'Vollkorn',
+                    fontFamily: 'Poppins',
                     fontWeight: FontWeight.bold,
                   ),
                 );
@@ -96,7 +104,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   textAlign: TextAlign.left,
                   style: const TextStyle(
                     fontSize: 15,
-                    fontFamily: 'Vollkorn',
+                    fontFamily: 'Poppins',
                   ),
                 );
               }),
@@ -136,7 +144,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   style: TextStyle(
                     color: Color(0xffFDFDFD),
                     fontSize: 20,
-                    fontFamily: 'Vollkorn',
+                    fontFamily: 'Poppins',
                   ),
                 ),
               ),
