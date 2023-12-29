@@ -25,45 +25,34 @@ class _EditProfileState extends State<EditProfile> {
           child: Column(
             children: [
               const SizedBox(height: 90),
-              Obx(() {
-                return _imagePickerController.image.value != null
-                    ? ClipRRect(
-                        borderRadius: BorderRadius.circular(100),
-                        child: Image.file(
-                          _imagePickerController.image.value!,
-                          width: 250,
-                          height: 250,
-                        ),
-                      )
-                    : const Text('Pick Your Gorgeous Picture');
-              }),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+              Stack(
+                alignment: Alignment.bottomRight,
                 children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xff6FA6FF),
-                    ),
-                    onPressed: () async {
-                      _imagePickerController.getImage(ImageSource.gallery);
+                  GestureDetector(
+                    onTap: () async {
+                      await _imagePickerController.getImage(ImageSource.camera);
                     },
-                    child: const Text(
-                      'Gallery',
-                      style: TextStyle(color: Colors.white, fontSize: 16),
-                    ),
+                    child: Obx(() {
+                      return _imagePickerController.image.value != null
+                          ? ClipRRect(
+                              borderRadius: BorderRadius.circular(100),
+                              child: Image.file(
+                                _imagePickerController.image.value!,
+                                width: 250,
+                                height: 250,
+                              ),
+                            )
+                          : const Text('Pick Your Gorgeous Picture');
+                    }),
                   ),
-                  const SizedBox(width: 20),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xff6FA6FF),
-                    ),
-                    onPressed: () async {
-                      _imagePickerController.getImage(ImageSource.camera);
+                  IconButton(
+                    onPressed: () {
+                      _showImageSourceDialog();
                     },
-                    child: const Text(
-                      'Camera',
-                      style: TextStyle(color: Colors.white, fontSize: 16),
+                    icon: const Icon(
+                      Icons.camera_alt,
+                      color: Colors.blue,
+                      size: 40,
                     ),
                   ),
                 ],
@@ -91,32 +80,68 @@ class _EditProfileState extends State<EditProfile> {
               ),
               const SizedBox(height: 50),
               ElevatedButton(
-                  style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          const Color(0xff6FA6FF)),
-                      side: MaterialStateProperty.all(
-                          const BorderSide(color: Color(0xff01294D), width: 1)),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(5))),
-                      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                          const EdgeInsets.symmetric(
-                              horizontal: 25, vertical: 10)),
-                      elevation: MaterialStateProperty.all<double>(5)),
-                  onPressed: () {},
-                  child: const Text(
-                    "Submit",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontFamily: 'Vollkorn',
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(const Color(0xff6FA6FF)),
+                  side: MaterialStateProperty.all(
+                      const BorderSide(color: Color(0xff01294D), width: 1)),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
                     ),
-                  )),
+                  ),
+                  padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                    const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                  ),
+                  elevation: MaterialStateProperty.all<double>(5),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  "Submit",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontFamily: 'Vollkorn',
+                  ),
+                ),
+              ),
               const SizedBox(height: 10),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  void _showImageSourceDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Select Image Source'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    _imagePickerController.getImage(ImageSource.camera);
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Camera'),
+                ),
+                const SizedBox(height: 20),
+                GestureDetector(
+                  onTap: () {
+                    _imagePickerController.getImage(ImageSource.gallery);
+                    Navigator.pop(context);
+                  },
+                  child: const Text('Gallery'),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 }
