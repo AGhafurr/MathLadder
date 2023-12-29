@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 import 'dart:async';
 import 'dart:math';
 import 'package:math_ladder/features/gamePage/winner_page.dart';
@@ -116,7 +115,7 @@ class _GamePageState extends State<GamePage> {
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          title: Text('Jawaban Benar'),
+                          title: const Text('Jawaban Benar'),
                           content: Text('Maju $diceNumber langkah'),
                           actions: [
                             TextButton(
@@ -124,7 +123,7 @@ class _GamePageState extends State<GamePage> {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).pop();
                               },
-                              child: Text('Ok'),
+                              child: const Text('Ok'),
                             ),
                           ],
                         );
@@ -138,7 +137,7 @@ class _GamePageState extends State<GamePage> {
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          title: Text('Jawaban Salah'),
+                          title: const Text('Jawaban Salah'),
                           content: Text('Mundur $diceNumber langkah'),
                           actions: [
                             TextButton(
@@ -146,7 +145,7 @@ class _GamePageState extends State<GamePage> {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).pop();
                               },
-                              child: Text('Ok'),
+                              child: const Text('Ok'),
                             ),
                           ],
                         );
@@ -180,7 +179,7 @@ class _GamePageState extends State<GamePage> {
                 ),
                 child: Text(
                   '${loadedQuestions[index]['options']['a']}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 20,
                     color: Colors.white,
                   ),
@@ -197,7 +196,7 @@ class _GamePageState extends State<GamePage> {
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          title: Text('Jawaban Benar'),
+                          title: const Text('Jawaban Benar'),
                           content: Text('Maju $diceNumber langkah'),
                           actions: [
                             TextButton(
@@ -205,7 +204,7 @@ class _GamePageState extends State<GamePage> {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).pop();
                               },
-                              child: Text('Ok'),
+                              child: const Text('Ok'),
                             ),
                           ],
                         );
@@ -219,7 +218,7 @@ class _GamePageState extends State<GamePage> {
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          title: Text('Jawaban Salah'),
+                          title: const Text('Jawaban Salah'),
                           content: Text('Mundur $diceNumber langkah'),
                           actions: [
                             TextButton(
@@ -227,7 +226,7 @@ class _GamePageState extends State<GamePage> {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).pop();
                               },
-                              child: Text('Ok'),
+                              child: const Text('Ok'),
                             ),
                           ],
                         );
@@ -262,7 +261,7 @@ class _GamePageState extends State<GamePage> {
                 ),
                 child: Text(
                   '${loadedQuestions[index]['options']['b']}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 20,
                     color: Colors.white,
                   ),
@@ -285,7 +284,7 @@ class _GamePageState extends State<GamePage> {
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          title: Text('Jawaban Benar'),
+                          title: const Text('Jawaban Benar'),
                           content: Text('Maju $diceNumber langkah'),
                           actions: [
                             TextButton(
@@ -293,7 +292,7 @@ class _GamePageState extends State<GamePage> {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).pop();
                               },
-                              child: Text('Ok'),
+                              child: const Text('Ok'),
                             ),
                           ],
                         );
@@ -307,7 +306,7 @@ class _GamePageState extends State<GamePage> {
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          title: Text('Jawaban Salah'),
+                          title: const Text('Jawaban Salah'),
                           content: Text('Mundur $diceNumber langkah'),
                           actions: [
                             TextButton(
@@ -315,7 +314,7 @@ class _GamePageState extends State<GamePage> {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).pop();
                               },
-                              child: Text('Ok'),
+                              child: const Text('Ok'),
                             ),
                           ],
                         );
@@ -350,7 +349,7 @@ class _GamePageState extends State<GamePage> {
                 ),
                 child: Text(
                   '${loadedQuestions[index]['options']['c']}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 20,
                     color: Colors.white,
                   ),
@@ -367,7 +366,7 @@ class _GamePageState extends State<GamePage> {
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          title: Text('Jawaban Benar'),
+                          title: const Text('Jawaban Benar'),
                           content: Text('Maju $diceNumber langkah'),
                           actions: [
                             TextButton(
@@ -375,7 +374,7 @@ class _GamePageState extends State<GamePage> {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).pop();
                               },
-                              child: Text('Ok'),
+                              child: const Text('Ok'),
                             ),
                           ],
                         );
@@ -389,7 +388,7 @@ class _GamePageState extends State<GamePage> {
                       context: context,
                       builder: (context) {
                         return AlertDialog(
-                          title: Text('Jawaban Salah'),
+                          title: const Text('Jawaban Salah'),
                           content: Text('Mundur $diceNumber langkah'),
                           actions: [
                             TextButton(
@@ -397,7 +396,7 @@ class _GamePageState extends State<GamePage> {
                                 Navigator.of(context).pop();
                                 Navigator.of(context).pop();
                               },
-                              child: Text('Ok'),
+                              child: const Text('Ok'),
                             ),
                           ],
                         );
@@ -432,7 +431,7 @@ class _GamePageState extends State<GamePage> {
                 ),
                 child: Text(
                   '${loadedQuestions[index]['options']['d']}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 20,
                     color: Colors.white,
                   ),
