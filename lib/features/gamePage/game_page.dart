@@ -2,6 +2,9 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
+import 'package:math_ladder/controllers/auth_controller.dart';
+import 'package:math_ladder/controllers/point_controlle.dart';
 import 'dart:async';
 import 'dart:math';
 import 'package:math_ladder/features/gamePage/winner_page.dart';
@@ -23,6 +26,8 @@ class GamePage extends StatefulWidget {
 }
 
 class _GamePageState extends State<GamePage> {
+  final authController = Get.put(AuthController());
+  final pointController = Get.put(PointController());
   var loadedQuestions = [];
   int diceNumber = 1;
   int pawnPosition = 0;
@@ -33,6 +38,7 @@ class _GamePageState extends State<GamePage> {
   late Timer _timer;
   List<int> randomNumbers = [];
   String yourAnswer = '';
+  int point = 0;
 
   @override
   void initState() {
@@ -130,6 +136,10 @@ class _GamePageState extends State<GamePage> {
                       },
                     );
                     setState(() {
+                      point += 40;
+                    });
+                    print(point);
+                    setState(() {
                       pawnPosition = (pawnPosition + diceNumber) % 64;
                     });
                   } else {
@@ -210,6 +220,10 @@ class _GamePageState extends State<GamePage> {
                         );
                       },
                     );
+                    setState(() {
+                      point += 40;
+                    });
+                    print(point);
                     setState(() {
                       pawnPosition = (pawnPosition + diceNumber) % 64;
                     });
@@ -299,6 +313,10 @@ class _GamePageState extends State<GamePage> {
                       },
                     );
                     setState(() {
+                      point += 40;
+                    });
+                    print(point);
+                    setState(() {
                       pawnPosition = (pawnPosition + diceNumber) % 64;
                     });
                   } else {
@@ -380,6 +398,10 @@ class _GamePageState extends State<GamePage> {
                         );
                       },
                     );
+                    setState(() {
+                      point += 40;
+                    });
+                    print(point);
                     setState(() {
                       pawnPosition = (pawnPosition + diceNumber) % 64;
                     });
@@ -484,6 +506,11 @@ class _GamePageState extends State<GamePage> {
   }
 
   void showGameEndDialog(String winnerMessage) {
+    pointController.updateUserPoint(
+      id: authController.user['id'],
+      point: point,
+    );
+
     showDialog(
       context: context,
       barrierDismissible: false,
