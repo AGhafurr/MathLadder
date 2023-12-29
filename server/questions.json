@@ -1,509 +1,1030 @@
 {
-    "questions": {
-        "beginner": [
-            {
-                "question": "Nilai x = 5 maka x + 2 = ...",
-                "answer": "7",
-                "options:": {
-                    "a": "6",
-                    "b": "7",
-                    "c": "10",
-                    "d": "12"
-                }
-            },
-            {
-                "question": "Diketahui nilai y = 15. Hasil dari 3y = ...",
-                "answer": "45",
-                "options:": {
-                    "a": "18",
-                    "b": "30",
-                    "c": "45",
-                    "d": "50"
-                }
-            },
-            {
-                "question": "Misalkan p = 18. Nilai dari 2p : 6 = ...",
-                "answer": "6",
-                "options:": {
-                    "a": "3",
-                    "b": "4",
-                    "c": "5",
-                    "d": "6"
-                }
-            },
-            {
-                "question": "Hasil dari -72 : (-8) = ...",
-                "answer": "9",
-                "options:": {
-                    "a": "9",
-                    "b": "8",
-                    "c": "-7",
-                    "d": "-9"
-                }
-            },
-            {
-                "question": "Hasil dari -140 : 70 = ...",
-                "answer": "-2",
-                "options:": {
-                    "a": "20",
-                    "b": "14",
-                    "c": "-2",
-                    "d": "-7"
-                }
-            },
-            {
-                "question": "Pak Candra memiliki 36 lembar kertas warna. Semua kertas warna dibagikan kepada ketiga anaknya sama banyak. Setiap anak menerima ... lembar kertas warna.",
-                "answer": "12",
-                "options:": {
-                    "a": "13",
-                    "b": "12",
-                    "c": "11",
-                    "d": "10"
-                }
-            },
-            {
-                "question": "Pecahan yang berpenyebut seratus disebut ...",
-                "answer": "Persen",
-                "options:": {
-                    "a": "Pecahan desimal",
-                    "b": "Permil",
-                    "c": "Pecahan campuran",
-                    "d": "Persen"
-                }
-            },
-            {
-                "question": "Ciri pecahan desimal adalah terdapat ...",
-                "answer": "Tanda koma",
-                "options:": {
-                    "a": "Tanda koma",
-                    "b": "Tanda %",
-                    "c": "Pembilang",
-                    "d": "Penyebut"
-                }
-            },
-            {
-                "question": "Sebuah kue dipotong menjadi 10 bagian sama besar. Hendra memakan 2 bagian. Nilai pecahan bagian yang dimakan Hendra adalah ...",
-                "answer": "2/10",
-                "options:": {
-                    "a": "1/10",
-                    "b": "2/8",
-                    "c": "2/10",
-                    "d": "8/10"
-                }
-            },
-            {
-                "question": "Pecahan paling sederhana dari 14/35 adalah ...",
-                "answer": "2/5",
-                "options:": {
-                    "a": "4/7",
-                    "b": "4/10",
-                    "c": "2/5",
-                    "d": "1/7"
-                }
-            },
-            {
-                "question": "Pecahan yang senilai dengan 3/5 adalah ...",
-                "answer": "9/15",
-                "options:": {
-                    "a": "8/10",
-                    "b": "9/15",
-                    "c": "8/16",
-                    "d": "12/15"
-                }
-            },
-            {
-                "question": "Pasangan pecahan yang senilai adalah ...",
-                "answer": "6/8 dan 9/12",
-                "options:": {
-                    "a": "1/3 dan 2/8",
-                    "b": "2/4 dan 4/12",
-                    "c": "2/6 dan 3/15",
-                    "d": "6/8 dan 9/12"
-                }
-            },
-            {
-                "question": "0,06 senilai dengan ...",
-                "answer": "6%",
-                "options:": {
-                    "a": "6%",
-                    "b": "6/10",
-                    "c": "60%",
-                    "d": "3/5"
-                }
-            },
-            {
-                "question": "Bentuk desimal dari 8/5 adalah ...",
-                "answer": "1,6",
-                "options:": {
-                    "a": "1,6",
-                    "b": "0,8",
-                    "c": "0,16",
-                    "d": "0,08"
-                }
-            },
-            {
-                "question": "Bentuk pecahan campuran dari 20/6 adalah ...",
-                "answer": "3 2/6",
-                "options:": {
-                    "a": "2 3/6",
-                    "b": "3 2/6",
-                    "c": "2 1/6",
-                    "d": "3 1/6"
-                }
-            }
-        ],
-        "intermediate": [
-            {
-                "question": "Tentukan tiga suku berikutnya dari pola 2, 3, 5, 8, ..., ..., ...",
-                "answer": "13, 21, 34",
-                "options:": {
-                    "a": "13, 21, 34",
-                    "b": "12, 17, 24",
-                    "c": "9, 11, 15",
-                    "d": "11, 14, 17"
-                }
-            },
-            {
-                "question": "Tentukan huruf yang hilang dari pola: A, B, D, ..., G, J, J, M, N.",
-                "answer": "F",
-                "options:": {
-                    "a": "E",
-                    "b": "F",
-                    "c": "G",
-                    "d": "H"
-                }
-            },
-            {
-                "question": "Tiga pola selanjutnya dari 1, 3, 4, 7, 9, 11, 16, ..., ..., ...",
-                "answer": "15, 25, 19",
-                "options:": {
-                    "a": "15, 25, 19",
-                    "b": "18, 23, 26",
-                    "c": "20, 16, 28",
-                    "d": "20, 25, 26"
-                }
-            },
-            {
-                "question": "Tiga pola selanjutnya dari 5, 4, 9, 8, 13, 12, 17, ..., ..., ...",
-                "answer": "16, 21, 20",
-                "options:": {
-                    "a": "18, 23, 22",
-                    "b": "17, 22, 21",
-                    "c": "16, 21, 20",
-                    "d": "15, 20, 19"
-                }
-            },
-            {
-                "question": "Himpunan berikut yang merupakan fungsi adalah ...",
-                "answer": "{(1, 2),(2, 3), (3, 4), (4, 5), (5, 6)}",
-                "options:": {
-                    "a": "{(1, 1),(1, 2), (1, 3), (1, 4), (1, 5)}",
-                    "b": "{(1, 2),(2, 3), (3, 4), (4, 5), (5, 6)}",
-                    "c": "{(4, 2),(4, 3), (3, 1), (3, 2), (1, 1)}",
-                    "d": "{(4, 2),(3, 2), (2, 2), (2, 3), (1, 2)}"
-                }
-            },
-            {
-                "question": "Dari pola bilangan berikut : 5, 11, 19, 30, 45, 65, x, y, z. Nilai x, y dan z adalah ...",
-                "answer": "91, 124, 166",
-                "options:": {
-                    "a": "91, 123, 165",
-                    "b": "91, 124, 165",
-                    "c": "91, 124, 166",
-                    "d": "91, 125, 166"
-                }
-            },
-            {
-                "question": "Tiga bilangan ganjil berurutan yang jumlahnya 243 adalah ...",
-                "answer": "80, 81 dan 82",
-                "options:": {
-                    "a": "81, 83 dan 85",
-                    "b": "80, 81 dan 82",
-                    "c": "79, 81 dan 83",
-                    "d": "77, 81 dan 85"
-                }
-            },
-            {
-                "question": "Angka satuan bilangan 1781945 adalah ...",
-                "answer": "6",
-                "options:": {
-                    "a": "2",
-                    "b": "4",
-                    "c": "6",
-                    "d": "8"
-                }
-            },
-            {
-                "question": "Garis k melalui (-3, 5) dan (0, 5). Sedangkan garis m melalui (-3, 3) dan (-1, 3). Posisi garis k dan m adalah ...",
-                "answer": "sejajar sumbu-X",
-                "options:": {
-                    "a": "sejajar sumbu-X",
-                    "b": "sejajar sumbu Y",
-                    "c": "tegak lurus sumbu X",
-                    "d": "berpotongan dengan sumbu X"
-                }
-            },
-            {
-                "question": "Dika sedang latihan baris-berbaris. Mula-mula ia berjalan ke timur 4 langkah, kemudian 3 langkah ke Utara. Jika titik awal Dika berjalan adalah titik (1, 1), maka koordinat Dika sekarang adalah ...",
-                "answer": "(5, 4)",
-                "options:": {
-                    "a": "(0, 3)",
-                    "b": "(4, 0)",
-                    "c": "(5, 4)",
-                    "d": "(4, 3)"
-                }
-            },
-            {
-                "question": "Suku ke sepuluh dari deretan bilangan 243, 81, 27, 9, ... yaitu ...",
-                "answer": "1/81",
-                "options:": {
-                    "a": "1/27",
-                    "b": "1/81",
-                    "c": "-81",
-                    "d": "-1/27"
-                }
-            },
-            {
-                "question": "Tentukan suku ke-8 dari deretan bilangan 32, 16, 8, 4, ...",
-                "answer": "1/4",
-                "options:": {
-                    "a": "1/4",
-                    "b": "1",
-                    "c": "1/2",
-                    "d": "2"
-                }
-            },
-            {
-                "question": "Tentukan suku ke-9 dari deretan bilangan 6, 12, 20, 30, 42, ...",
-                "answer": "110",
-                "options:": {
-                    "a": "90",
-                    "b": "110",
-                    "c": "72",
-                    "d": "121"
-                }
-            },
-            {
-                "question": "Tiga pola berikutnya dari barisan bilangan 1, 3, 4, 7, 9, 11, 16, ..., ..., ... yaitu ...",
-                "answer": "15, 25, 19",
-                "options:": {
-                    "a": "20, 16, 28",
-                    "b": "18, 23, 26",
-                    "c": "15, 25, 19",
-                    "d": "20, 25, 26"
-                }
-            },
-            {
-                "question": "Dua pola berikutnya dari barisan bilangan 1, 3, 4, 7, 9, 13, 16, 21, ..., ... adalah ...",
-                "answer": "27, 31",
-                "options:": {
-                    "a": "25, 31",
-                    "b": "25, 30",
-                    "c": "27, 31",
-                    "d": "25, 29"
-                }
-            },
-            {
-                "question": "Dua suku selanjutnya dari deretan bilangan 1, 3, 6, 10, 15, 21, 28, ... yaitu ...",
-                "answer": "36, 46",
-                "options:": {
-                    "a": "35, 45",
-                    "b": "35, 44",
-                    "c": "36, 46",
-                    "d": "36, 45"
-                }
-            },
-            {
-                "question": "Dua suku selanjutnya dari deretan bilangan 1, 3, 8, 16, 27, 41, ... yaitu ...",
-                "answer": "58, 78",
-                "options:": {
-                    "a": "58, 78",
-                    "b": "57, 79",
-                    "c": "57, 79",
-                    "d": "58, 79"
-                }
-            },
-            {
-                "question": "Cobalah untuk tentukan tiga suku selanjutnya dari pola bilangan 2, 3, 5, 8, ..., ..., ...",
-                "answer": "13, 21, 34",
-                "options:": {
-                    "a": "9, 11, 15",
-                    "b": "12, 17, 24",
-                    "c": "13, 21, 34",
-                    "d": "11, 14, 17"
-                }
-            },
-            {
-                "question": "Cobalah untuk tentukan satu huruf yang hilang pada pola A, B, D, ..., G, J, J, M, N.",
-                "answer": "F",
-                "options:": {
-                    "a": "F",
-                    "b": "G",
-                    "c": "E",
-                    "d": "H"
-                }
-            },
-            {
-                "question": "Tentukan dua suku yang tidak diketahui dari pola: 2, -1, 3, 4, 1, 5, 6, 3, 7, ..., ...",
-                "answer": "8, 5",
-                "options:": {
-                    "a": "11, 8",
-                    "b": "8, 5",
-                    "c": "10, 7",
-                    "d": "9, 6"
-                }
-            },
-            {
-                "question": "Gradien garis yang melalui titik A(-2, -1) dan B(1,3) adalah ...",
-                "answer": "4/3",
-                "options:": {
-                    "a": "-4/3",
-                    "b": "-3/4",
-                    "c": "3/4",
-                    "d": "4/3"
-                }
-            },
-            {
-                "question": "Koordinat titik A berjarak 5 satuan terhadap sumbu X dan berjarak 7 satuan terhadap sumbu Y. Koordinat titik A adalah ...",
-                "answer": "(-5,-7)",
-                "options:": {
-                    "a": "(7,-5)",
-                    "b": "(5,7)",
-                    "c": "(5,-7)",
-                    "d": "(-5,-7)"
-                }
-            },
-            {
-                "question": "A (2,2), B(-2,1), C(-3,-3), D(1,-2).",
-                "answer": "titik A dan titik D",
-                "options:": {
-                    "a": "titik A dan titik B",
-                    "b": "titik A dan titik C",
-                    "c": "titik A dan titik D",
-                    "d": "titik B dan titik D"
-                }
-            },
-            {
-                "question": "Diantara garis berikut sejajar dengan garis dengan persamaan 6x - 12y + 13 = 0, kecuali ...",
-                "answer": "4x + 8y - 3 = 0",
-                "options:": {
-                    "a": "2x - 4y - 1 = 0",
-                    "b": "3x - 4y - 5 = 0",
-                    "c": "4x + 8y - 3 = 0",
-                    "d": "x - 2y + 6 = 0"
-                }
-            },
-            {
-                "question": "Persamaan garis yang melalui titik P(4, -5) dan Q(2, 1) adalah ...",
-                "answer": "3x + y - 7 = 0",
-                "options:": {
-                    "a": "x - 3y + 11 = 0",
-                    "b": "x - 3y - 11 = 0",
-                    "c": "3x + y + 7 = 0",
-                    "d": "3x + y - 7 = 0"
-                }
-            },
-            {
-                "question": "Tentukan dua suku yang tidak diketahui dari pola: 2, -1, 3, 4, 1, 5, 6, 3, 7, ..., ...",
-                "answer": "8, 5",
-                "options": {
-                    "a": "11, 8",
-                    "b": "8, 5",
-                    "c": "10, 7",
-                    "d": "9, 6"
-                }
-            },
-            {
-                "question": "Seutas tali dibagi menjadi tujuh bagian sehingga panjang masing-masing bagian membentuk barisan geometri. Jika panjang tali terpendek 5 m dan tali terpanjang 320 m, maka panjang tali mula-mula adalah ...",
-                "answer": "750 m",
-                "options": {
-                    "a": "275 m",
-                    "b": "320 m",
-                    "c": "635 m",
-                    "d": "750 m"
-                }
-            },
-            {
-                "question": "Tentukan suku ke-8 dari deretan bilangan 32, 16, 8, 4, ...",
-                "answer": "1/4",
-                "options": {
-                    "a": "1/4",
-                    "b": "1",
-                    "c": "1/2",
-                    "d": "2"
-                }
-            },
-            {
-                "question": "A(2, 2), B(-2, 1), C(-3, -3), dan D(1, -2). Pasangan titik berikut mempunyai jarak yang sama terhadap sumbu Y adalah ...",
-                "answer": "titik A dan titik D",
-                "options": {
-                    "a": "titik A dan titik B",
-                    "b": "titik A dan titik C",
-                    "c": "titik A dan titik D",
-                    "d": "titik B dan titik D"
-                }
-            },
-            {
-                "question": "Tiga pola berikutnya dari barisan bilangan 1, 3, 4, 7, 9, 11, 16, ..., ..., ... yaitu ...",
-                "answer": "15, 25, 19",
-                "options": {
-                    "a": "20, 16, 28",
-                    "b": "18, 23, 26",
-                    "c": "15, 25, 19",
-                    "d": "20, 25, 26"
-                }
-            },
-            {
-                "question": "Telah diketahui bahwa A = {x | 1 ≤ x < 4, x ∊ A}, B = {2, 3, 5, 7}. Maka berdasarkan hal tersebut, banyaknya fungsi dari A ke B yaitu ...",
-                "answer": "64",
-                "options": {
-                    "a": "12",
-                    "b": "7",
-                    "c": "81",
-                    "d": "64"
-                }
-            },
-            {
-                "question": "Cobalah untuk perhatikan pola bilangan di bawah ini! (2, 6), (3, 11), (5, 19) Berdasarkan pola bilangan tersebut, maka pernyataan yang tepat untuk mendapatkan sebuah bilangan kedua dari bilangan pertama pada pola di atas yaitu ...",
-                "answer": "Dikalikan dengan 2 kemudian dikurangi 1",
-                "options": {
-                    "a": "Dikalikan dengan 2 kemudian ditambah 3",
-                    "b": "Dikalikan dengan 2 kemudian dikurangi 1",
-                    "c": "Dikalikan dengan 3",
-                    "d": "Ditambah dengan 4"
-                }
-            },
-            {
-                "question": "Jarak dari titik A(3,5) pada sumbu-X serta sumbu-Y dalam kuadran yaitu ...",
-                "answer": "Titik A berjarak sebanyak 3 satuan dari sumbu-Y serta berjarak sebanyak 5 satuan dari sumbu-X. Maka titik A berada pada kuadran I.",
-                "options": {
-                    "a": "Titik A berjarak sebanyak 3 satuan dari sumbu-Y serta berjarak sebanyak 5 satuan dari sumbu-X. Maka titik A berada pada kuadran I.",
-                    "b": "Titik A berjarak sebanyak 5 satuan dari sumbu-Y serta berjarak sebanyak 3 satuan dari sumbu-X. Maka titik A berada pada kuadran IV.",
-                    "c": "Titik A berjarak sebanyak 5 satuan dari sumbu-Y serta berjarak sebanyak 3 satuan dari sumbu-X. Maka titik A berada pada kuadran I.",
-                    "d": "Titik A berjarak sebanyak 3 satuan dari sumbu-Y serta berjarak sebanyak 5 satuan dari sumbu-X. Maka titik A berada pada kuadran IV."
-                }
-            },
-            {
-                "question": "Tentukan fungsi dengan rumus f(x) = 4 - 2x², f(-5) ...",
-                "answer": "-46",
-                "options": {
-                    "a": "54",
-                    "b": "46",
-                    "c": "-46",
-                    "d": "104"
-                }
-            },
-            {
-                "question": "Dari semua himpunan di bawah, yang merupakan fungsi yaitu ...",
-                "answer": "{(1, 1),(1, 2), (1, 3), (1, 4), (1, 5)}",
-                "options": {
-                    "a": "{(1, 1),(1, 2), (1, 3), (1, 4), (1, 5)}",
-                    "b": "{(1, 2),(2, 3), (3, 4), (4, 5), (5, 6)}",
-                    "c": "{(4, 2),(4, 3), (3, 1), (3, 2), (1, 1)}",
-                    "d": "{(4, 2),(3, 2), (2, 2), (2, 3), (1, 2)}"
-                }
-            }
-        ],
-        "advance": [{}, {}]
-    }
+  "questions": {
+    "beginner": [
+      {
+        "question": "Nilai x = 5 maka x + 2 = ...",
+        "answer": "7",
+        "options:": {
+          "a": "6",
+          "b": "7",
+          "c": "10",
+          "d": "12"
+        }
+      },
+      {
+        "question": "Diketahui nilai y = 15. Hasil dari 3y = ...",
+        "answer": "45",
+        "options:": {
+          "a": "18",
+          "b": "30",
+          "c": "45",
+          "d": "50"
+        }
+      },
+      {
+        "question": "Misalkan p = 18. Nilai dari 2p : 6 = ...",
+        "answer": "6",
+        "options:": {
+          "a": "3",
+          "b": "4",
+          "c": "5",
+          "d": "6"
+        }
+      },
+      {
+        "question": "Hasil dari -72 : (-8) = ...",
+        "answer": "9",
+        "options:": {
+          "a": "9",
+          "b": "8",
+          "c": "-7",
+          "d": "-9"
+        }
+      },
+      {
+        "question": "Hasil dari -140 : 70 = ...",
+        "answer": "-2",
+        "options:": {
+          "a": "20",
+          "b": "14",
+          "c": "-2",
+          "d": "-7"
+        }
+      },
+      {
+        "question": "Pak Candra memiliki 36 lembar kertas warna. Semua kertas warna dibagikan kepada ketiga anaknya sama banyak. Setiap anak menerima ... lembar kertas warna.",
+        "answer": "12",
+        "options:": {
+          "a": "13",
+          "b": "12",
+          "c": "11",
+          "d": "10"
+        }
+      },
+      {
+        "question": "Pecahan yang berpenyebut seratus disebut ...",
+        "answer": "Persen",
+        "options:": {
+          "a": "Pecahan desimal",
+          "b": "Permil",
+          "c": "Pecahan campuran",
+          "d": "Persen"
+        }
+      },
+      {
+        "question": "Ciri pecahan desimal adalah terdapat ...",
+        "answer": "Tanda koma",
+        "options:": {
+          "a": "Tanda koma",
+          "b": "Tanda %",
+          "c": "Pembilang",
+          "d": "Penyebut"
+        }
+      },
+      {
+        "question": "Sebuah kue dipotong menjadi 10 bagian sama besar. Hendra memakan 2 bagian. Nilai pecahan bagian yang dimakan Hendra adalah ...",
+        "answer": "2/10",
+        "options:": {
+          "a": "1/10",
+          "b": "2/8",
+          "c": "2/10",
+          "d": "8/10"
+        }
+      },
+      {
+        "question": "Pecahan paling sederhana dari 14/35 adalah ...",
+        "answer": "2/5",
+        "options:": {
+          "a": "4/7",
+          "b": "4/10",
+          "c": "2/5",
+          "d": "1/7"
+        }
+      },
+      {
+        "question": "Pecahan yang senilai dengan 3/5 adalah ...",
+        "answer": "9/15",
+        "options:": {
+          "a": "8/10",
+          "b": "9/15",
+          "c": "8/16",
+          "d": "12/15"
+        }
+      },
+      {
+        "question": "Pasangan pecahan yang senilai adalah ...",
+        "answer": "6/8 dan 9/12",
+        "options:": {
+          "a": "1/3 dan 2/8",
+          "b": "2/4 dan 4/12",
+          "c": "2/6 dan 3/15",
+          "d": "6/8 dan 9/12"
+        }
+      },
+      {
+        "question": "0,06 senilai dengan ...",
+        "answer": "6%",
+        "options:": {
+          "a": "6%",
+          "b": "6/10",
+          "c": "60%",
+          "d": "3/5"
+        }
+      },
+      {
+        "question": "Bentuk desimal dari 8/5 adalah ...",
+        "answer": "1,6",
+        "options:": {
+          "a": "1,6",
+          "b": "0,8",
+          "c": "0,16",
+          "d": "0,08"
+        }
+      },
+      {
+        "question": "Bentuk pecahan campuran dari 20/6 adalah ...",
+        "answer": "3 2/6",
+        "options:": {
+          "a": "2 3/6",
+          "b": "3 2/6",
+          "c": "2 1/6",
+          "d": "3 1/6"
+        }
+      },
+      {
+        "question": "Sebutkan 3 faktor prima dari 450!",
+        "answer": "2, 3, dan 5",
+        "options:": {
+          "a": "3, 5, dan 7",
+          "b": "2, 3, dan 5",
+          "c": "7, 11, dan 13",
+          "d": "73, 77, dan 91"
+        }
+      },
+      {
+        "question": "Tuliskan bilangan prima antara 200 dan 220!",
+        "answer": "209 dan 211",
+        "options:": {
+          "a": "212 dan 217",
+          "b": "213 dan 215",
+          "c": "209 dan 211",
+          "d": "209 dan 219"
+        }
+      },
+      {
+        "question": "Perkalian 2² x 3⁴ x 5 adalah faktorisasi prima dari ...",
+        "answer": "1.620",
+        "options:": {
+          "a": "2.970",
+          "b": "9.130",
+          "c": "2.140",
+          "d": "1.620"
+        }
+      },
+      {
+        "question": "Hasil penjumlahan seluruh faktor prima dari 1.400 adalah ...",
+        "answer": "14",
+        "options:": {
+          "a": "17",
+          "b": "9",
+          "c": "13",
+          "d": "14"
+        }
+      },
+      {
+        "question": "Tuliskan himpunan faktor dari 81!",
+        "answer": "{1, 3, 9, 27, 81}",
+        "options:": {
+          "a": "{1, 11, 13, 21, 81}",
+          "b": "{1, 3, 9, 27, 81}",
+          "c": "{9, 11, 13, 17, 27}",
+          "d": "{2, 5, 27, 31, 81}"
+        }
+      },
+      {
+        "question": "Berapakah FPB dan KPK dari 75, 90, 100!",
+        "answer": "5 dan 900",
+        "options:": {
+          "a": "5 dan 700",
+          "b": "7 dan 900",
+          "c": "5 dan 900",
+          "d": "15 dan 900"
+        }
+      },
+      {
+        "question": "Lampu A menyala setiap 15 detik. Lampu B menyala setiap 20 detik. Jika awalnya kedua lampu menyala bersama-sama, kapan lampu itu menyala bersama-sama lagi?",
+        "answer": "60 detik",
+        "options:": {
+          "a": "60 detik",
+          "b": "61,5 detik",
+          "c": "64 detik",
+          "d": "67 detik"
+        }
+      },
+      {
+        "question": "Satu regu pramuka terdiri atas 10 anak, masing-masing anggota memiliki satu gulung tali pramuka yang panjangnya 2 meter. Untuk membuat tandu hanya diperlukan 8 gulung saja. Sedangkan sisanya digunakan untuk membuat jemuran. Berapa meter tali yang digunakan untuk membuat jemuran?",
+        "answer": "4,5 meter",
+        "options:": {
+          "a": "2 meter",
+          "b": "7 meter",
+          "c": "4,5 meter",
+          "d": "4 meter"
+        }
+      },
+      {
+        "question": "Seorang pedagang membeli 100 kg mangga dengan harga Rp400.000,00. la mengharapkan untung sebesar 30%. Berapa harga jual mangga setiap kilogramnya?",
+        "answer": "Rp.5.200",
+        "options:": {
+          "a": "Rp.5.200",
+          "b": "Rp.5.300",
+          "c": "Rp.5.400",
+          "d": "Rp.6.300"
+        }
+      },
+      {
+        "question": "Paman memiliki sebatang bambu panjangnya 10 meter. Setengah dari panjang bambu digunakan untuk membuat tiang bendera. Setengah dari sisanya diberikan kepada Mail. Tinggal berapa meter bambu yang dimiliki paman?",
+        "answer": "2,5 meter",
+        "options:": {
+          "a": "7 meter",
+          "b": "5,5 meter",
+          "c": "2,5 meter",
+          "d": "3,7 meter"
+        }
+      },
+      {
+        "question": "Jika cos x = 2 sin x, maka nilai sin x cos x adalah ...",
+        "answer": "2/5",
+        "options:": {
+          "a": "11/5",
+          "b": "1/4",
+          "c": "1/3",
+          "d": "2/5"
+        }
+      },
+      {
+        "question": "2 sin 30 = ...",
+        "answer": "1",
+        "options:": {
+          "a": "1",
+          "b": "0,5",
+          "c": "2",
+          "d": "3"
+        }
+      },
+      {
+        "question": "Turunan pertama fungsi f(x) = 4x + 4 adalah ...",
+        "answer": "4",
+        "options:": {
+          "a": "0",
+          "b": "8",
+          "c": "1",
+          "d": "4"
+        }
+      },
+      {
+        "question": "Banyaknya bilangan genap n = abc dengan 3 digit sehingga 3 < b < c adalah ...",
+        "answer": "54",
+        "options:": {
+          "a": "48",
+          "b": "54",
+          "c": "60",
+          "d": "72"
+        }
+      },
+      {
+        "question": "Tiga pasang suami istri duduk berdampingan pada satu baris. Jika setiap pasang suami harus duduk berdampingan, maka  banyak cara mereka duduk adalah ...",
+        "answer": "48",
+        "options:": {
+          "a": "12",
+          "b": "48",
+          "c": "36",
+          "d": "18"
+        }
+      },
+      {
+        "question": "Banyak bilangan genap yang terdiri dari tiga angka berbeda yang disusun dari bilangan 1, 3, 6, 7, 8 adalah ... ",
+        "answer": "24",
+        "options:": {
+          "a": "125",
+          "b": "25",
+          "c": "24",
+          "d": "64"
+        }
+      },
+      {
+        "question": "Banyak cara untuk menyusun foto berjajar untuk 3 pasang pemain bulutangkis ganda dengan tidak ada setiap pemain dan pasangannya berdekatan adalah ...",
+        "answer": "672",
+        "options:": {
+          "a": "720",
+          "b": "672",
+          "c": "624",
+          "d": "705"
+        }
+      }
+    ],
+    "intermediate": [
+      {
+        "question": "Tentukan tiga suku berikutnya dari pola 2, 3, 5, 8, ..., ..., ...",
+        "answer": "13, 21, 34",
+        "options:": {
+          "a": "13, 21, 34",
+          "b": "12, 17, 24",
+          "c": "9, 11, 15",
+          "d": "11, 14, 17"
+        }
+      },
+      {
+        "question": "Tentukan huruf yang hilang dari pola: A, B, D, ..., G, J, J, M, N.",
+        "answer": "F",
+        "options:": {
+          "a": "E",
+          "b": "F",
+          "c": "G",
+          "d": "H"
+        }
+      },
+      {
+        "question": "Tiga pola selanjutnya dari 1, 3, 4, 7, 9, 11, 16, ..., ..., ...",
+        "answer": "15, 25, 19",
+        "options:": {
+          "a": "15, 25, 19",
+          "b": "18, 23, 26",
+          "c": "20, 16, 28",
+          "d": "20, 25, 26"
+        }
+      },
+      {
+        "question": "Tiga pola selanjutnya dari 5, 4, 9, 8, 13, 12, 17, ..., ..., ...",
+        "answer": "16, 21, 20",
+        "options:": {
+          "a": "18, 23, 22",
+          "b": "17, 22, 21",
+          "c": "16, 21, 20",
+          "d": "15, 20, 19"
+        }
+      },
+      {
+        "question": "Himpunan berikut yang merupakan fungsi adalah ...",
+        "answer": "{(1, 2),(2, 3), (3, 4), (4, 5), (5, 6)}",
+        "options:": {
+          "a": "{(1, 1),(1, 2), (1, 3), (1, 4), (1, 5)}",
+          "b": "{(1, 2),(2, 3), (3, 4), (4, 5), (5, 6)}",
+          "c": "{(4, 2),(4, 3), (3, 1), (3, 2), (1, 1)}",
+          "d": "{(4, 2),(3, 2), (2, 2), (2, 3), (1, 2)}"
+        }
+      },
+      {
+        "question": "Dari pola bilangan berikut : 5, 11, 19, 30, 45, 65, x, y, z. Nilai x, y dan z adalah ...",
+        "answer": "91, 124, 166",
+        "options:": {
+          "a": "91, 123, 165",
+          "b": "91, 124, 165",
+          "c": "91, 124, 166",
+          "d": "91, 125, 166"
+        }
+      },
+      {
+        "question": "Tiga bilangan ganjil berurutan yang jumlahnya 243 adalah ...",
+        "answer": "80, 81 dan 82",
+        "options:": {
+          "a": "81, 83 dan 85",
+          "b": "80, 81 dan 82",
+          "c": "79, 81 dan 83",
+          "d": "77, 81 dan 85"
+        }
+      },
+      {
+        "question": "Angka satuan bilangan 1781945 adalah ...",
+        "answer": "6",
+        "options:": {
+          "a": "2",
+          "b": "4",
+          "c": "6",
+          "d": "8"
+        }
+      },
+      {
+        "question": "Garis k melalui (-3, 5) dan (0, 5). Sedangkan garis m melalui (-3, 3) dan (-1, 3). Posisi garis k dan m adalah ...",
+        "answer": "sejajar sumbu-X",
+        "options:": {
+          "a": "sejajar sumbu-X",
+          "b": "sejajar sumbu Y",
+          "c": "tegak lurus sumbu X",
+          "d": "berpotongan dengan sumbu X"
+        }
+      },
+      {
+        "question": "Dika sedang latihan baris-berbaris. Mula-mula ia berjalan ke timur 4 langkah, kemudian 3 langkah ke Utara. Jika titik awal Dika berjalan adalah titik (1, 1), maka koordinat Dika sekarang adalah ...",
+        "answer": "(5, 4)",
+        "options:": {
+          "a": "(0, 3)",
+          "b": "(4, 0)",
+          "c": "(5, 4)",
+          "d": "(4, 3)"
+        }
+      },
+      {
+        "question": "Suku ke sepuluh dari deretan bilangan 243, 81, 27, 9, ... yaitu ...",
+        "answer": "1/81",
+        "options:": {
+          "a": "1/27",
+          "b": "1/81",
+          "c": "-81",
+          "d": "-1/27"
+        }
+      },
+      {
+        "question": "Tentukan suku ke-8 dari deretan bilangan 32, 16, 8, 4, ...",
+        "answer": "1/4",
+        "options:": {
+          "a": "1/4",
+          "b": "1",
+          "c": "1/2",
+          "d": "2"
+        }
+      },
+      {
+        "question": "Tentukan suku ke-9 dari deretan bilangan 6, 12, 20, 30, 42, ...",
+        "answer": "110",
+        "options:": {
+          "a": "90",
+          "b": "110",
+          "c": "72",
+          "d": "121"
+        }
+      },
+      {
+        "question": "Tiga pola berikutnya dari barisan bilangan 1, 3, 4, 7, 9, 11, 16, ..., ..., ... yaitu ...",
+        "answer": "15, 25, 19",
+        "options:": {
+          "a": "20, 16, 28",
+          "b": "18, 23, 26",
+          "c": "15, 25, 19",
+          "d": "20, 25, 26"
+        }
+      },
+      {
+        "question": "Dua pola berikutnya dari barisan bilangan 1, 3, 4, 7, 9, 13, 16, 21, ..., ... adalah ...",
+        "answer": "27, 31",
+        "options:": {
+          "a": "25, 31",
+          "b": "25, 30",
+          "c": "27, 31",
+          "d": "25, 29"
+        }
+      },
+      {
+        "question": "Dua suku selanjutnya dari deretan bilangan 1, 3, 6, 10, 15, 21, 28, ... yaitu ...",
+        "answer": "36, 46",
+        "options:": {
+          "a": "35, 45",
+          "b": "35, 44",
+          "c": "36, 46",
+          "d": "36, 45"
+        }
+      },
+      {
+        "question": "Dua suku selanjutnya dari deretan bilangan 1, 3, 8, 16, 27, 41, ... yaitu ...",
+        "answer": "58, 78",
+        "options:": {
+          "a": "58, 78",
+          "b": "57, 79",
+          "c": "57, 79",
+          "d": "58, 79"
+        }
+      },
+      {
+        "question": "Cobalah untuk tentukan tiga suku selanjutnya dari pola bilangan 2, 3, 5, 8, ..., ..., ...",
+        "answer": "13, 21, 34",
+        "options:": {
+          "a": "9, 11, 15",
+          "b": "12, 17, 24",
+          "c": "13, 21, 34",
+          "d": "11, 14, 17"
+        }
+      },
+      {
+        "question": "Cobalah untuk tentukan satu huruf yang hilang pada pola A, B, D, ..., G, J, J, M, N.",
+        "answer": "F",
+        "options:": {
+          "a": "F",
+          "b": "G",
+          "c": "E",
+          "d": "H"
+        }
+      },
+      {
+        "question": "Tentukan dua suku yang tidak diketahui dari pola: 2, -1, 3, 4, 1, 5, 6, 3, 7, ..., ...",
+        "answer": "8, 5",
+        "options:": {
+          "a": "11, 8",
+          "b": "8, 5",
+          "c": "10, 7",
+          "d": "9, 6"
+        }
+      },
+      {
+        "question": "Gradien garis yang melalui titik A(-2, -1) dan B(1,3) adalah ...",
+        "answer": "4/3",
+        "options:": {
+          "a": "-4/3",
+          "b": "-3/4",
+          "c": "3/4",
+          "d": "4/3"
+        }
+      },
+      {
+        "question": "Koordinat titik A berjarak 5 satuan terhadap sumbu X dan berjarak 7 satuan terhadap sumbu Y. Koordinat titik A adalah ...",
+        "answer": "(-5,-7)",
+        "options:": {
+          "a": "(7,-5)",
+          "b": "(5,7)",
+          "c": "(5,-7)",
+          "d": "(-5,-7)"
+        }
+      },
+      {
+        "question": "A (2,2), B(-2,1), C(-3,-3), D(1,-2).",
+        "answer": "titik A dan titik D",
+        "options:": {
+          "a": "titik A dan titik B",
+          "b": "titik A dan titik C",
+          "c": "titik A dan titik D",
+          "d": "titik B dan titik D"
+        }
+      },
+      {
+        "question": "Diantara garis berikut sejajar dengan garis dengan persamaan 6x - 12y + 13 = 0, kecuali ...",
+        "answer": "4x + 8y - 3 = 0",
+        "options:": {
+          "a": "2x - 4y - 1 = 0",
+          "b": "3x - 4y - 5 = 0",
+          "c": "4x + 8y - 3 = 0",
+          "d": "x - 2y + 6 = 0"
+        }
+      },
+      {
+        "question": "Persamaan garis yang melalui titik P(4, -5) dan Q(2, 1) adalah ...",
+        "answer": "3x + y - 7 = 0",
+        "options:": {
+          "a": "x - 3y + 11 = 0",
+          "b": "x - 3y - 11 = 0",
+          "c": "3x + y + 7 = 0",
+          "d": "3x + y - 7 = 0"
+        }
+      },
+      {
+        "question": "Tentukan dua suku yang tidak diketahui dari pola: 2, -1, 3, 4, 1, 5, 6, 3, 7, ..., ...",
+        "answer": "8, 5",
+        "options": {
+          "a": "11, 8",
+          "b": "8, 5",
+          "c": "10, 7",
+          "d": "9, 6"
+        }
+      },
+      {
+        "question": "Seutas tali dibagi menjadi tujuh bagian sehingga panjang masing-masing bagian membentuk barisan geometri. Jika panjang tali terpendek 5 m dan tali terpanjang 320 m, maka panjang tali mula-mula adalah ...",
+        "answer": "750 m",
+        "options": {
+          "a": "275 m",
+          "b": "320 m",
+          "c": "635 m",
+          "d": "750 m"
+        }
+      },
+      {
+        "question": "Tentukan suku ke-8 dari deretan bilangan 32, 16, 8, 4, ...",
+        "answer": "1/4",
+        "options": {
+          "a": "1/4",
+          "b": "1",
+          "c": "1/2",
+          "d": "2"
+        }
+      },
+      {
+        "question": "A(2, 2), B(-2, 1), C(-3, -3), dan D(1, -2). Pasangan titik berikut mempunyai jarak yang sama terhadap sumbu Y adalah ...",
+        "answer": "titik A dan titik D",
+        "options": {
+          "a": "titik A dan titik B",
+          "b": "titik A dan titik C",
+          "c": "titik A dan titik D",
+          "d": "titik B dan titik D"
+        }
+      },
+      {
+        "question": "Tiga pola berikutnya dari barisan bilangan 1, 3, 4, 7, 9, 11, 16, ..., ..., ... yaitu ...",
+        "answer": "15, 25, 19",
+        "options": {
+          "a": "20, 16, 28",
+          "b": "18, 23, 26",
+          "c": "15, 25, 19",
+          "d": "20, 25, 26"
+        }
+      },
+      {
+        "question": "Telah diketahui bahwa A = {x | 1 ≤ x < 4, x ∊ A}, B = {2, 3, 5, 7}. Maka berdasarkan hal tersebut, banyaknya fungsi dari A ke B yaitu ...",
+        "answer": "64",
+        "options": {
+          "a": "12",
+          "b": "7",
+          "c": "81",
+          "d": "64"
+        }
+      },
+      {
+        "question": "Cobalah untuk perhatikan pola bilangan di bawah ini! (2, 6), (3, 11), (5, 19) Berdasarkan pola bilangan tersebut, maka pernyataan yang tepat untuk mendapatkan sebuah bilangan kedua dari bilangan pertama pada pola di atas yaitu ...",
+        "answer": "Dikalikan dengan 2 kemudian dikurangi 1",
+        "options": {
+          "a": "Dikalikan dengan 2 kemudian ditambah 3",
+          "b": "Dikalikan dengan 2 kemudian dikurangi 1",
+          "c": "Dikalikan dengan 3",
+          "d": "Ditambah dengan 4"
+        }
+      },
+      {
+        "question": "Jarak dari titik A(3,5) pada sumbu-X serta sumbu-Y dalam kuadran yaitu ...",
+        "answer": "Titik A berjarak sebanyak 3 satuan dari sumbu-Y serta berjarak sebanyak 5 satuan dari sumbu-X. Maka titik A berada pada kuadran I.",
+        "options": {
+          "a": "Titik A berjarak sebanyak 3 satuan dari sumbu-Y serta berjarak sebanyak 5 satuan dari sumbu-X. Maka titik A berada pada kuadran I.",
+          "b": "Titik A berjarak sebanyak 5 satuan dari sumbu-Y serta berjarak sebanyak 3 satuan dari sumbu-X. Maka titik A berada pada kuadran IV.",
+          "c": "Titik A berjarak sebanyak 5 satuan dari sumbu-Y serta berjarak sebanyak 3 satuan dari sumbu-X. Maka titik A berada pada kuadran I.",
+          "d": "Titik A berjarak sebanyak 3 satuan dari sumbu-Y serta berjarak sebanyak 5 satuan dari sumbu-X. Maka titik A berada pada kuadran IV."
+        }
+      },
+      {
+        "question": "Tentukan fungsi dengan rumus f(x) = 4 - 2x², f(-5) ...",
+        "answer": "-46",
+        "options": {
+          "a": "54",
+          "b": "46",
+          "c": "-46",
+          "d": "104"
+        }
+      },
+      {
+        "question": "Dari semua himpunan di bawah, yang merupakan fungsi yaitu ...",
+        "answer": "{(1, 1),(1, 2), (1, 3), (1, 4), (1, 5)}",
+        "options": {
+          "a": "{(1, 1),(1, 2), (1, 3), (1, 4), (1, 5)}",
+          "b": "{(1, 2),(2, 3), (3, 4), (4, 5), (5, 6)}",
+          "c": "{(4, 2),(4, 3), (3, 1), (3, 2), (1, 1)}",
+          "d": "{(4, 2),(3, 2), (2, 2), (2, 3), (1, 2)}"
+        }
+      }
+    ],
+    "advance": [
+      {
+        "question": "Jika lingkaran x2 + y2 - 2ax + b = 0 mempunyai jari-jari 2 dan menyinggung x - y = 0 maka nilai a2 + b adalah ...",
+        "answer": "16",
+        "options": {
+          "a": "16",
+          "b": "8",
+          "c": "4",
+          "d": "2"
+        }
+      },
+      {
+        "question": "Persamaan parabola yang berpuncak pada titik (3, -2) dan fokusnya (5, -2) adalah ...",
+        "answer": "(y + 2)2 = 8(x - 3)",
+        "options": {
+          "a": "(y + 2)2 = 8(x - 3)",
+          "b": "(y + 2)2 = 8(x + 3)",
+          "c": "(y + 2)2 = 8(3 - x)",
+          "d": "(x - 3)2 = 8(y + 2)"
+        }
+      },
+      {
+        "question": "Panjang sumbu mayor elips x2 + 4y2 + 2x - 8y + 1 = 0 adalah ...",
+        "answer": "4",
+        "options": {
+          "a": "8",
+          "b": "6",
+          "c": "4",
+          "d": "2"
+        }
+      },
+      {
+        "question": "Fungsi y = 4x3 - 6x2 + 2 naik pada interval ...",
+        "answer": "x < 0 atau x > 1",
+        "options": {
+          "a": "x < 0 atau x > 1",
+          "b": "x > 1",
+          "c": "x < 1",
+          "d": "x < 0"
+        }
+      },
+      {
+        "question": "Rusuk suatu kubus bertambah panjang dengan laju 7 cm per detik. Laju bertambahnya volume pada saat rusuk panjangnya 15 cm adalah ...",
+        "answer": "4.725 cm2/detik",
+        "options": {
+          "a": "675 cm2/detik",
+          "b": "1.575 cm2/detik",
+          "c": "3.375 cm2/detik",
+          "d": "4.725 cm2/detik"
+        }
+      },
+      {
+        "question": "Berikut ini yang merupakan angka dari lambang bilangan dua ratus tiga puluh tujuh adalah ...",
+        "answer": "237",
+        "options": {
+          "a": "237",
+          "b": "257",
+          "c": "277",
+          "d": "222"
+        }
+      },
+      {
+        "question": "Nama bilangan yang lebih kecil dari 211 adalah ...",
+        "answer": "Seratus sebelas",
+        "options": {
+          "a": "Dua ratus tiga belas",
+          "b": "Seratus sebelas",
+          "c": "Dua ratus sebelas",
+          "d": "Seratus sepuluh belas"
+        }
+      },
+      {
+        "question": "Lambang bilangan sesudah 199 dan 201 adalah ...",
+        "answer": "200",
+        "options": {
+          "a": "198 dan 200",
+          "b": "200 dan 202",
+          "c": "200",
+          "d": "201"
+        }
+      },
+      {
+        "question": "248 + n = 392",
+        "answer": "144",
+        "options": {
+          "a": "155",
+          "b": "134",
+          "c": "144",
+          "d": "201"
+        }
+      },
+      {
+        "question": "Jika cos x = 2sin x, maka nilai sin x cos x adalah ...",
+        "answer": "2/5",
+        "options": {
+          "a": "1/5",
+          "b": "1/4",
+          "c": "1/3",
+          "d": "2/5"
+        }
+      },
+      {
+        "question": "Grafik fungsi y = -2 - cos (x/2) adalah ...",
+        "answer": "Terletak di bawah sumbu x",
+        "options": {
+          "a": "Terletak di bawah sumbu x",
+          "b": "Terletak di atas sumbu x",
+          "c": "Menyinggung sumbu x di banyak titik",
+          "d": "Memotong sumbu x di banyak titik"
+        }
+      },
+      {
+        "question": "Lambang bilangan dari tiga ratus limah puluh empat adalah ...",
+        "answer": "354",
+        "options": {
+          "a": "354",
+          "b": "534",
+          "c": "435",
+          "d": "222"
+        }
+      },
+      {
+        "question": "Pada bilangan 187, mana yang merupakan angka puluhan adalah ...",
+        "answer": "8",
+        "options": {
+          "a": "1",
+          "b": "8",
+          "c": "7",
+          "d": "4"
+        }
+      },
+      {
+        "question": "Tiga orang petugas dinas lingkungan hidup akan mengukur panjang Danau Tanralili di Kabupaten Goa. Orang pertama berada di titik A, orang kedua berada di titik B, dan orang ketika berada di titik C. Ketiga petugas tersebut mengukur panjang Danau Tanralili dengan bantuan drone. Dari titik A orang pertama menerbangkan drone dengan jurusan tiga angka 45 derajat ke titik B dan tercatat drone terbang selama 15 menit dengan kecepatan 1,2 km/jam. Kemudian dari titik B orang kedua menerbangkan drone dengan jurusan tiga angka 105 derajat ke titik C dan tercatat drone terbang selama 20 menit dengan kecepatan 1,2 km/jam. Jika p adalah jarak titik A ke titik C atau Danau Tanralili dalam meter, nilai luas p adalah ...",
+        "answer": "670 m",
+        "options": {
+          "a": "650 m",
+          "b": "660 m",
+          "c": "670 m",
+          "d": "680 m"
+        }
+      },
+      {
+        "question": "Angka 245 apabila ditulis menjadi huruf menjadi ...",
+        "answer": "Dua ratus empat puluh lima",
+        "options": {
+          "a": "Dua ratus lima puluh empat",
+          "b": "Dua ratus empat puluh lima",
+          "c": "Dua ratus empat lima",
+          "d": "Dua ratus lime empat"
+        }
+      },
+      {
+        "question": "Pada bilangan 172, angka puluhan terletak pada angka ...",
+        "answer": "7",
+        "options": {
+          "a": "1",
+          "b": "2",
+          "c": "7",
+          "d": "8"
+        }
+      },
+      {
+        "question": "245 - 239 - 217 - 268 Jika deretan bilangan di atas diurutkan dari yang paling kecil akan menjadi ...",
+        "answer": "217 - 239 - 245 - 268",
+        "options": {
+          "a": "217 - 239 - 245 - 268",
+          "b": "217 - 268 - 239 - 245",
+          "c": "268 - 245 - 239 - 217",
+          "d": "123 - 465 - 789 - 123"
+        }
+      },
+      {
+        "question": "762 ... 752 Dari angka di atas, bagian titik-titik lebih tepat diisi dengan ...",
+        "answer": ">",
+        "options": {
+          "a": "=",
+          "b": ">",
+          "c": "<",
+          "d": ">="
+        }
+      },
+      {
+        "question": "Perhatikan himpunan berikut ini! {2x+4y-2z=-4 -2x-y+3z=2 x+3y+4z=2 Himpunan penyelesaian yang memenuhi sistem persamaan di bawah ini adalah ...",
+        "answer": "{1,-1,1}",
+        "options": {
+          "a": "{1,-1,1}",
+          "b": "{1,1,1}",
+          "c": "{-1,-1,-1}",
+          "d": "{1,0,1}"
+        }
+      },
+      {
+        "question": "Diketahui f(x) = 2 - x dan g(x) = x2 + 5x, fungsi komposisi (g o f) (x) adalah ...",
+        "answer": "x2 - 9x + 14",
+        "options": {
+          "a": "x2 - 7x + 14",
+          "b": "x2 + 7x + 1",
+          "c": "x2 - 7x - 1",
+          "d": "x2 - 9x + 14"
+        }
+      },
+      {
+        "question": "Nilai x yang memenuhi persamaan | x + 5 | = 3 ...",
+        "answer": "x = -2 dan x = -8",
+        "options": {
+          "a": "x = 1 dan x = 2",
+          "b": "x = -2 dan x = -8",
+          "c": "x = -1 dan x = 2",
+          "d": "x = 3 dan x = -8"
+        }
+      },
+      {
+        "question": "Pada segitiga ABC diketahui panjang sisi a dan b berturut-turut 5 cm dan 6 cm. jika besar sudut C adalah 600 maka panjang sisi c adalah ...",
+        "answer": "5 cm",
+        "options": {
+          "a": "4 cm",
+          "b": "5 cm",
+          "c": "6 cm",
+          "d": "4,5 cm"
+        }
+      },
+      {
+        "question": "Diketahui limas segi empat T. ABCD dengan rusuk-rusuk tegak 15 cm, bidang alasnya ABCD berbentuk persegi panjang dengan AB = 10 cm dan BC = 12 cm. Jika α adalah sudut antara bidang TAB dengan bidang alas ABCD maka Sin = ….",
+        "answer": "1/10 √82 cm",
+        "options": {
+          "a": " 2/5 √19 cm",
+          "b": "1/16 √78 cm",
+          "c": "4/5 √5 cm",
+          "d": "1/10 √82 cm"
+        }
+      },
+      {
+        "question": " Penyelesaian dari √2x + 6 > 0 adalah …..",
+        "answer": "x > -3",
+        "options": {
+          "a": "x < 3",
+          "b": " x ≤ -3",
+          "c": "x ≥ -3",
+          "d": "x > -3"
+        }
+      },
+      {
+        "question": "Suatu kereta udara mempunyai 50 tempat duduk penumpang. Setiap penumpang kelas utama boleh membawa 60 kg barang, sedangkan untuk penumpang kelas ekonomi boleh membawa 20 kg barang. Kereta tersebut hanya dapat membawa 1500 kg barang. Jika banyak penumpang kelas utama adalah x dan banyaknya kelas ekonomi y, model matematika yang harus dipenuhi oleh x dan y adalah.......... ",
+        "answer": "x ≥ 0, x + y ≤ 50 , 3x + y ≤ 75",
+        "options": {
+          "a": "x ≥ 0, x + y ≤ 50 , 3x + y ≤ 75",
+          "b": "x ≥ 0, x + y ≤ 50 , 3x + y ≤ 15",
+          "c": "x ≥ 0, x + y ≤ 50, x + 3y ≤ 7",
+          "d": "x ≥ 0, x + y ≤ 25, x + 3y ≤ 7"
+        }
+      },
+      {
+        "question": "Diketahui matrik K= (-2/0 -3/4) dan L= (0/3 -5/1) Jika matrik M = KT – L, determinan matrik M adalah ……",
+        "answer": "24",
+        "options": {
+          "a": "-6",
+          "b": "-4",
+          "c": "20",
+          "d": "24"
+        }
+      },
+      {
+        "question": "Diketahui koordinat P(-8, 12) dilatasi [ P,1] memetakan titik (-4, 8) ke titik.....",
+        "answer": "(-4, 8)",
+        "options": {
+          "a": "(-4, 8)",
+          "b": "(-4, 16)",
+          "c": "(-4, -8)",
+          "d": "(4, -16)"
+        }
+      },
+      {
+        "question": "Nilai suku ke 6 dan suku ke 14 suatu barisan aritmatika berturut-turut 3 dan 19, nilai suku ke 30 adalah ... ",
+        "answer": "51",
+        "options": {
+          "a": "51",
+          "b": "61",
+          "c": "59",
+          "d": "53"
+        }
+      },
+      {
+        "question": "Nilai dari - √(x(x+2)) adalah ….",
+        "answer": "2",
+        "options": {
+          "a": "8",
+          "b": "4",
+          "c": "2",
+          "d": "1"
+        }
+      },
+      {
+        "question": "Nilai turunan pertama fungsi f(x) = 2x3 + 3x2 – 12x + 5 untuk x = -4 adalah … ",
+        "answer": "60",
+        "options": {
+          "a": "108",
+          "b": "96",
+          "c": "60",
+          "d": "-27"
+        }
+      },
+      {
+        "question": " Diketahui fungsi gx=-x3+6x2-9x+15. Grafik fungsi g turun pada nilai … ",
+        "answer": " x < 1 atau x > 3",
+        "options": {
+          "a": " x < 1 atau x > 3",
+          "b": "x < -3 atau x > -1",
+          "c": "1 < x < 3",
+          "d": "-1 < x < 3"
+        }
+      },
+      {
+        "question": "Fungsi f(x) = x3 + 9x2 + 15x – 2 mempunyai ….",
+        "answer": "Nilai maksimum 23 untuk x = -5",
+        "options": {
+          "a": "Nilai minimum 9 untuk x = -1",
+          "b": "Nilai maksimum 23 untuk x = -5",
+          "c": "Nilai maksimum 9 untuk x = -1",
+          "d": "Nilai minimum 23 untuk x = -1"
+        }
+      },
+      {
+        "question": "Hasil dari ∫(4x3- 6x2+x-3) dx = …",
+        "answer": "x4 - 3x3 + 12x2 - 3x + C",
+        "options": {
+          "a": "x4 - 2x3 + 12x2 - 3x + C",
+          "b": "x4 - 3x3 + 12x2 - 3x + C",
+          "c": "x4 - 2x3 + x2 - 3x + C",
+          "d": "x4 - 2x3 + 2x2 - 3x + C"
+        }
+      },
+      {
+        "question": "Suatu kepanitiaan terdiri dari 3 pria dan 2 wanita. Jika banyak siswa yang diusulkan untuk duduk dalam kepanitiaan ada 7 pria dan 9 wanita, banyak susunan panitia yang dapat dibentuk adalah … ",
+        "answer": "2.520",
+        "options": {
+          "a": "60",
+          "b": "980",
+          "c": "2.520",
+          "d": "1.260"
+        }
+      },
+      {
+        "question": "Dua tahun yang lalu umur Ayah 6 kali umur anaknya. Delapan belas tahun kemudian umur Ayah menjadi dua kali umur anaknya. Berapakah jumlah umur mereka sekarang ...",
+        "answer": "39",
+        "options": {
+          "a": "36",
+          "b": "37",
+          "c": "38",
+          "d": "39"
+        }
+      }
+    ]
+  }
 }
