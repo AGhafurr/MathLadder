@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import '../../controllers/image_picker_controller.dart';
+
+import '../../controllers/auth_controller.dart';
+import 'edit_profile_controller.dart';
 
 class EditProfile extends StatefulWidget {
   const EditProfile({Key? key}) : super(key: key);
@@ -11,9 +13,9 @@ class EditProfile extends StatefulWidget {
 }
 
 class _EditProfileState extends State<EditProfile> {
-  final ImagePickerController _imagePickerController =
-      Get.put(ImagePickerController());
-  final TextEditingController _userNameController = TextEditingController();
+  final authController = Get.put(AuthController());
+  final editProfileController = Get.put(EditProfileController());
+  final userNameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -30,14 +32,14 @@ class _EditProfileState extends State<EditProfile> {
                 children: [
                   GestureDetector(
                     onTap: () async {
-                      await _imagePickerController.getImage(ImageSource.camera);
+                      await editProfileController.getImage(ImageSource.camera);
                     },
                     child: Obx(() {
-                      return _imagePickerController.image.value != null
+                      return editProfileController.image.value != null
                           ? ClipRRect(
                               borderRadius: BorderRadius.circular(100),
                               child: Image.file(
-                                _imagePickerController.image.value!,
+                                editProfileController.image.value!,
                                 width: 250,
                                 height: 250,
                               ),
@@ -68,7 +70,7 @@ class _EditProfileState extends State<EditProfile> {
               ),
               const SizedBox(height: 8),
               TextFormField(
-                controller: _userNameController,
+                controller: userNameController,
                 decoration: InputDecoration(
                   hintText: 'Username',
                   labelText: 'Username',
@@ -95,7 +97,12 @@ class _EditProfileState extends State<EditProfile> {
                   ),
                   elevation: MaterialStateProperty.all<double>(5),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  editProfileController.updateProfile(
+                    id: authController.user['id'],
+                    username: userNameController.text,
+                  );
+                },
                 child: const Text(
                   "Submit",
                   style: TextStyle(
@@ -124,7 +131,7 @@ class _EditProfileState extends State<EditProfile> {
               children: [
                 GestureDetector(
                   onTap: () {
-                    _imagePickerController.getImage(ImageSource.camera);
+                    editProfileController.getImage(ImageSource.camera);
                     Navigator.pop(context);
                   },
                   child: const Text('Camera'),
@@ -132,7 +139,7 @@ class _EditProfileState extends State<EditProfile> {
                 const SizedBox(height: 20),
                 GestureDetector(
                   onTap: () {
-                    _imagePickerController.getImage(ImageSource.gallery);
+                    editProfileController.getImage(ImageSource.gallery);
                     Navigator.pop(context);
                   },
                   child: const Text('Gallery'),

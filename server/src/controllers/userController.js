@@ -1,5 +1,6 @@
 import formidable from "formidable";
 import { supabase } from "../databases/supabase.js";
+import path from "path";
 
 export const me = async (req, res) => {
     const { id } = req.body;
@@ -25,13 +26,17 @@ export const updateProfilePicture = (req, res) => {
             return;
         }
 
-        const id = fields.id[0];
-        const file = files.profile_picture[0];
-        const { data, error } = await supabase.storage.from("profile-pictures").upload(`${id}.jpg`, file, {
-            cacheControl: "3600",
-            upsert: false,
-            contentType: "image/jpeg",
-        });
+        const id = fields.id;
+        const file = files.profile_picture;
+        const fileExtension = path.extname(file[0].originalFilename);
+
+        const { data, error } = await supabase.storage
+            .from("profile-pictures")
+            .upload(`${id}/profile_picture.${fileExtension.split(".")[1]}`, file, {
+                cacheControl: "3600",
+                upsert: true,
+                contentType: `image/${fileExtension.split(".")[1]}`,
+            });
 
         if (error) {
             res.json(error);
