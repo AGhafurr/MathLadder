@@ -1,16 +1,18 @@
-// ignore_for_file: use_key_in_widget_constructors
-
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'leader_board_controller.dart';
 
 class LeaderBoard extends StatefulWidget {
-  const LeaderBoard({Key? key});
+  const LeaderBoard({super.key});
 
   @override
   State<LeaderBoard> createState() => _LeaderBoardState();
 }
 
 class _LeaderBoardState extends State<LeaderBoard> {
-  final TextEditingController _searchController = TextEditingController();
+  final leaderBoardController = Get.put(LeaderBoardController());
+  final _searchController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -76,24 +78,38 @@ class _LeaderBoardState extends State<LeaderBoard> {
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: const Column(
+                    child: Column(
                       children: [
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(height: 20),
-                            Text(
-                              'Username 1',
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
-                            ),
+                            Obx(() {
+                              return leaderBoardController.leaderBoard[0]
+                                          ['id'] ==
+                                      ''
+                                  ? Text('0')
+                                  : Text(
+                                      '${leaderBoardController.leaderBoard[0]['users']['username']}',
+                                      style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold),
+                                    );
+                            }),
                             SizedBox(height: 8),
                             CircleAvatar(
                               backgroundImage: NetworkImage('url_to_image_2'),
                               radius: 40,
                             ),
                             SizedBox(height: 10),
-                            Text('Point Juara 2'),
+                            Obx(() {
+                              return leaderBoardController.leaderBoard[0]
+                                          ['id'] ==
+                                      ''
+                                  ? Text('0')
+                                  : Text(
+                                      '${leaderBoardController.leaderBoard[0]['point']}');
+                            }),
                           ],
                         ),
                         SizedBox(height: 20),
@@ -102,12 +118,18 @@ class _LeaderBoardState extends State<LeaderBoard> {
                           children: [
                             Column(
                               children: [
-                                Text(
-                                  'Username 2',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
+                                Obx(() {
+                                  return leaderBoardController.leaderBoard[1]
+                                              ['id'] ==
+                                          ''
+                                      ? Text('username')
+                                      : Text(
+                                          '${leaderBoardController.leaderBoard[1]['users']['username']}',
+                                          style: TextStyle(
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold),
+                                        );
+                                }),
                                 SizedBox(height: 8),
                                 CircleAvatar(
                                   backgroundImage:
@@ -115,7 +137,14 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                   radius: 40,
                                 ),
                                 SizedBox(height: 10),
-                                Text('Point Juara 1'),
+                                Obx(() {
+                                  return leaderBoardController.leaderBoard[1]
+                                              ['id'] ==
+                                          ''
+                                      ? Text('0')
+                                      : Text(
+                                          '${leaderBoardController.leaderBoard[1]['point']}');
+                                }),
                               ],
                             ),
                             SizedBox(width: 100),
@@ -123,12 +152,18 @@ class _LeaderBoardState extends State<LeaderBoard> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 SizedBox(height: 40),
-                                Text(
-                                  'Username 3',
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
+                                Obx(() {
+                                  return leaderBoardController.leaderBoard[2]
+                                              ['id'] ==
+                                          ''
+                                      ? Text('')
+                                      : Text(
+                                          '${leaderBoardController.leaderBoard[2]['users']['username']}',
+                                          style: TextStyle(
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.bold),
+                                        );
+                                }),
                                 SizedBox(height: 8),
                                 CircleAvatar(
                                   backgroundImage:
@@ -136,7 +171,15 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                   radius: 40,
                                 ),
                                 SizedBox(height: 10),
-                                Text('Point Juara 3'),
+                                Obx(() {
+                                  return leaderBoardController.leaderBoard[2]
+                                              ['id'] ==
+                                          ''
+                                      ? Text('0')
+                                      : Text(
+                                          '${leaderBoardController.leaderBoard[2]['point']}',
+                                        );
+                                }),
                               ],
                             ),
                           ],
