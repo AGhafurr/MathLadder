@@ -4,7 +4,7 @@
       {
         "question": "Nilai x = 5 maka x + 2 = ...",
         "answer": "7",
-        "options:": {
+        "options": {
           "a": "6",
           "b": "7",
           "c": "10",
@@ -14,7 +14,7 @@
       {
         "question": "Diketahui nilai y = 15. Hasil dari 3y = ...",
         "answer": "45",
-        "options:": {
+        "options": {
           "a": "18",
           "b": "30",
           "c": "45",
@@ -24,7 +24,7 @@
       {
         "question": "Misalkan p = 18. Nilai dari 2p : 6 = ...",
         "answer": "6",
-        "options:": {
+        "options": {
           "a": "3",
           "b": "4",
           "c": "5",
@@ -34,7 +34,7 @@
       {
         "question": "Hasil dari -72 : (-8) = ...",
         "answer": "9",
-        "options:": {
+        "options": {
           "a": "9",
           "b": "8",
           "c": "-7",
@@ -44,7 +44,7 @@
       {
         "question": "Hasil dari -140 : 70 = ...",
         "answer": "-2",
-        "options:": {
+        "options": {
           "a": "20",
           "b": "14",
           "c": "-2",
@@ -54,7 +54,7 @@
       {
         "question": "Pak Candra memiliki 36 lembar kertas warna. Semua kertas warna dibagikan kepada ketiga anaknya sama banyak. Setiap anak menerima ... lembar kertas warna.",
         "answer": "12",
-        "options:": {
+        "options": {
           "a": "13",
           "b": "12",
           "c": "11",
@@ -64,7 +64,7 @@
       {
         "question": "Pecahan yang berpenyebut seratus disebut ...",
         "answer": "Persen",
-        "options:": {
+        "options": {
           "a": "Pecahan desimal",
           "b": "Permil",
           "c": "Pecahan campuran",
@@ -74,7 +74,7 @@
       {
         "question": "Ciri pecahan desimal adalah terdapat ...",
         "answer": "Tanda koma",
-        "options:": {
+        "options": {
           "a": "Tanda koma",
           "b": "Tanda %",
           "c": "Pembilang",
@@ -84,7 +84,7 @@
       {
         "question": "Sebuah kue dipotong menjadi 10 bagian sama besar. Hendra memakan 2 bagian. Nilai pecahan bagian yang dimakan Hendra adalah ...",
         "answer": "2/10",
-        "options:": {
+        "options": {
           "a": "1/10",
           "b": "2/8",
           "c": "2/10",
@@ -94,7 +94,7 @@
       {
         "question": "Pecahan paling sederhana dari 14/35 adalah ...",
         "answer": "2/5",
-        "options:": {
+        "options": {
           "a": "4/7",
           "b": "4/10",
           "c": "2/5",
@@ -104,7 +104,7 @@
       {
         "question": "Pecahan yang senilai dengan 3/5 adalah ...",
         "answer": "9/15",
-        "options:": {
+        "options": {
           "a": "8/10",
           "b": "9/15",
           "c": "8/16",
@@ -114,7 +114,7 @@
       {
         "question": "Pasangan pecahan yang senilai adalah ...",
         "answer": "6/8 dan 9/12",
-        "options:": {
+        "options": {
           "a": "1/3 dan 2/8",
           "b": "2/4 dan 4/12",
           "c": "2/6 dan 3/15",
@@ -124,7 +124,7 @@
       {
         "question": "0,06 senilai dengan ...",
         "answer": "6%",
-        "options:": {
+        "options": {
           "a": "6%",
           "b": "6/10",
           "c": "60%",
@@ -134,7 +134,7 @@
       {
         "question": "Bentuk desimal dari 8/5 adalah ...",
         "answer": "1,6",
-        "options:": {
+        "options": {
           "a": "1,6",
           "b": "0,8",
           "c": "0,16",
@@ -144,7 +144,7 @@
       {
         "question": "Bentuk pecahan campuran dari 20/6 adalah ...",
         "answer": "3 2/6",
-        "options:": {
+        "options": {
           "a": "2 3/6",
           "b": "3 2/6",
           "c": "2 1/6",
@@ -154,7 +154,7 @@
       {
         "question": "Sebutkan 3 faktor prima dari 450!",
         "answer": "2, 3, dan 5",
-        "options:": {
+        "options": {
           "a": "3, 5, dan 7",
           "b": "2, 3, dan 5",
           "c": "7, 11, dan 13",
@@ -164,7 +164,7 @@
       {
         "question": "Tuliskan bilangan prima antara 200 dan 220!",
         "answer": "209 dan 211",
-        "options:": {
+        "options": {
           "a": "212 dan 217",
           "b": "213 dan 215",
           "c": "209 dan 211",
@@ -174,7 +174,7 @@
       {
         "question": "Perkalian 2² x 3⁴ x 5 adalah faktorisasi prima dari ...",
         "answer": "1.620",
-        "options:": {
+        "options": {
           "a": "2.970",
           "b": "9.130",
           "c": "2.140",
@@ -184,7 +184,7 @@
       {
         "question": "Hasil penjumlahan seluruh faktor prima dari 1.400 adalah ...",
         "answer": "14",
-        "options:": {
+        "options": {
           "a": "17",
           "b": "9",
           "c": "13",
@@ -194,7 +194,7 @@
       {
         "question": "Tuliskan himpunan faktor dari 81!",
         "answer": "{1, 3, 9, 27, 81}",
-        "options:": {
+        "options": {
           "a": "{1, 11, 13, 21, 81}",
           "b": "{1, 3, 9, 27, 81}",
           "c": "{9, 11, 13, 17, 27}",
@@ -204,7 +204,7 @@
       {
         "question": "Berapakah FPB dan KPK dari 75, 90, 100!",
         "answer": "5 dan 900",
-        "options:": {
+        "options": {
           "a": "5 dan 700",
           "b": "7 dan 900",
           "c": "5 dan 900",
@@ -214,7 +214,7 @@
       {
         "question": "Lampu A menyala setiap 15 detik. Lampu B menyala setiap 20 detik. Jika awalnya kedua lampu menyala bersama-sama, kapan lampu itu menyala bersama-sama lagi?",
         "answer": "60 detik",
-        "options:": {
+        "options": {
           "a": "60 detik",
           "b": "61,5 detik",
           "c": "64 detik",
@@ -224,7 +224,7 @@
       {
         "question": "Satu regu pramuka terdiri atas 10 anak, masing-masing anggota memiliki satu gulung tali pramuka yang panjangnya 2 meter. Untuk membuat tandu hanya diperlukan 8 gulung saja. Sedangkan sisanya digunakan untuk membuat jemuran. Berapa meter tali yang digunakan untuk membuat jemuran?",
         "answer": "4,5 meter",
-        "options:": {
+        "options": {
           "a": "2 meter",
           "b": "7 meter",
           "c": "4,5 meter",
@@ -234,7 +234,7 @@
       {
         "question": "Seorang pedagang membeli 100 kg mangga dengan harga Rp400.000,00. la mengharapkan untung sebesar 30%. Berapa harga jual mangga setiap kilogramnya?",
         "answer": "Rp.5.200",
-        "options:": {
+        "options": {
           "a": "Rp.5.200",
           "b": "Rp.5.300",
           "c": "Rp.5.400",
@@ -244,7 +244,7 @@
       {
         "question": "Paman memiliki sebatang bambu panjangnya 10 meter. Setengah dari panjang bambu digunakan untuk membuat tiang bendera. Setengah dari sisanya diberikan kepada Mail. Tinggal berapa meter bambu yang dimiliki paman?",
         "answer": "2,5 meter",
-        "options:": {
+        "options": {
           "a": "7 meter",
           "b": "5,5 meter",
           "c": "2,5 meter",
@@ -254,7 +254,7 @@
       {
         "question": "Jika cos x = 2 sin x, maka nilai sin x cos x adalah ...",
         "answer": "2/5",
-        "options:": {
+        "options": {
           "a": "11/5",
           "b": "1/4",
           "c": "1/3",
@@ -264,7 +264,7 @@
       {
         "question": "2 sin 30 = ...",
         "answer": "1",
-        "options:": {
+        "options": {
           "a": "1",
           "b": "0,5",
           "c": "2",
@@ -274,7 +274,7 @@
       {
         "question": "Turunan pertama fungsi f(x) = 4x + 4 adalah ...",
         "answer": "4",
-        "options:": {
+        "options": {
           "a": "0",
           "b": "8",
           "c": "1",
@@ -284,7 +284,7 @@
       {
         "question": "Banyaknya bilangan genap n = abc dengan 3 digit sehingga 3 < b < c adalah ...",
         "answer": "54",
-        "options:": {
+        "options": {
           "a": "48",
           "b": "54",
           "c": "60",
@@ -294,7 +294,7 @@
       {
         "question": "Tiga pasang suami istri duduk berdampingan pada satu baris. Jika setiap pasang suami harus duduk berdampingan, maka  banyak cara mereka duduk adalah ...",
         "answer": "48",
-        "options:": {
+        "options": {
           "a": "12",
           "b": "48",
           "c": "36",
@@ -304,7 +304,7 @@
       {
         "question": "Banyak bilangan genap yang terdiri dari tiga angka berbeda yang disusun dari bilangan 1, 3, 6, 7, 8 adalah ... ",
         "answer": "24",
-        "options:": {
+        "options": {
           "a": "125",
           "b": "25",
           "c": "24",
@@ -314,7 +314,7 @@
       {
         "question": "Banyak cara untuk menyusun foto berjajar untuk 3 pasang pemain bulutangkis ganda dengan tidak ada setiap pemain dan pasangannya berdekatan adalah ...",
         "answer": "672",
-        "options:": {
+        "options": {
           "a": "720",
           "b": "672",
           "c": "624",
@@ -326,7 +326,7 @@
       {
         "question": "Tentukan tiga suku berikutnya dari pola 2, 3, 5, 8, ..., ..., ...",
         "answer": "13, 21, 34",
-        "options:": {
+        "options": {
           "a": "13, 21, 34",
           "b": "12, 17, 24",
           "c": "9, 11, 15",
@@ -336,7 +336,7 @@
       {
         "question": "Tentukan huruf yang hilang dari pola: A, B, D, ..., G, J, J, M, N.",
         "answer": "F",
-        "options:": {
+        "options": {
           "a": "E",
           "b": "F",
           "c": "G",
@@ -346,7 +346,7 @@
       {
         "question": "Tiga pola selanjutnya dari 1, 3, 4, 7, 9, 11, 16, ..., ..., ...",
         "answer": "15, 25, 19",
-        "options:": {
+        "options": {
           "a": "15, 25, 19",
           "b": "18, 23, 26",
           "c": "20, 16, 28",
@@ -356,7 +356,7 @@
       {
         "question": "Tiga pola selanjutnya dari 5, 4, 9, 8, 13, 12, 17, ..., ..., ...",
         "answer": "16, 21, 20",
-        "options:": {
+        "options": {
           "a": "18, 23, 22",
           "b": "17, 22, 21",
           "c": "16, 21, 20",
@@ -366,7 +366,7 @@
       {
         "question": "Himpunan berikut yang merupakan fungsi adalah ...",
         "answer": "{(1, 2),(2, 3), (3, 4), (4, 5), (5, 6)}",
-        "options:": {
+        "options": {
           "a": "{(1, 1),(1, 2), (1, 3), (1, 4), (1, 5)}",
           "b": "{(1, 2),(2, 3), (3, 4), (4, 5), (5, 6)}",
           "c": "{(4, 2),(4, 3), (3, 1), (3, 2), (1, 1)}",
@@ -376,7 +376,7 @@
       {
         "question": "Dari pola bilangan berikut : 5, 11, 19, 30, 45, 65, x, y, z. Nilai x, y dan z adalah ...",
         "answer": "91, 124, 166",
-        "options:": {
+        "options": {
           "a": "91, 123, 165",
           "b": "91, 124, 165",
           "c": "91, 124, 166",
@@ -386,7 +386,7 @@
       {
         "question": "Tiga bilangan ganjil berurutan yang jumlahnya 243 adalah ...",
         "answer": "80, 81 dan 82",
-        "options:": {
+        "options": {
           "a": "81, 83 dan 85",
           "b": "80, 81 dan 82",
           "c": "79, 81 dan 83",
@@ -396,7 +396,7 @@
       {
         "question": "Angka satuan bilangan 1781945 adalah ...",
         "answer": "6",
-        "options:": {
+        "options": {
           "a": "2",
           "b": "4",
           "c": "6",
@@ -406,7 +406,7 @@
       {
         "question": "Garis k melalui (-3, 5) dan (0, 5). Sedangkan garis m melalui (-3, 3) dan (-1, 3). Posisi garis k dan m adalah ...",
         "answer": "sejajar sumbu-X",
-        "options:": {
+        "options": {
           "a": "sejajar sumbu-X",
           "b": "sejajar sumbu Y",
           "c": "tegak lurus sumbu X",
@@ -416,7 +416,7 @@
       {
         "question": "Dika sedang latihan baris-berbaris. Mula-mula ia berjalan ke timur 4 langkah, kemudian 3 langkah ke Utara. Jika titik awal Dika berjalan adalah titik (1, 1), maka koordinat Dika sekarang adalah ...",
         "answer": "(5, 4)",
-        "options:": {
+        "options": {
           "a": "(0, 3)",
           "b": "(4, 0)",
           "c": "(5, 4)",
@@ -426,7 +426,7 @@
       {
         "question": "Suku ke sepuluh dari deretan bilangan 243, 81, 27, 9, ... yaitu ...",
         "answer": "1/81",
-        "options:": {
+        "options": {
           "a": "1/27",
           "b": "1/81",
           "c": "-81",
@@ -436,7 +436,7 @@
       {
         "question": "Tentukan suku ke-8 dari deretan bilangan 32, 16, 8, 4, ...",
         "answer": "1/4",
-        "options:": {
+        "options": {
           "a": "1/4",
           "b": "1",
           "c": "1/2",
@@ -446,7 +446,7 @@
       {
         "question": "Tentukan suku ke-9 dari deretan bilangan 6, 12, 20, 30, 42, ...",
         "answer": "110",
-        "options:": {
+        "options": {
           "a": "90",
           "b": "110",
           "c": "72",
@@ -456,7 +456,7 @@
       {
         "question": "Tiga pola berikutnya dari barisan bilangan 1, 3, 4, 7, 9, 11, 16, ..., ..., ... yaitu ...",
         "answer": "15, 25, 19",
-        "options:": {
+        "options": {
           "a": "20, 16, 28",
           "b": "18, 23, 26",
           "c": "15, 25, 19",
@@ -466,7 +466,7 @@
       {
         "question": "Dua pola berikutnya dari barisan bilangan 1, 3, 4, 7, 9, 13, 16, 21, ..., ... adalah ...",
         "answer": "27, 31",
-        "options:": {
+        "options": {
           "a": "25, 31",
           "b": "25, 30",
           "c": "27, 31",
@@ -476,7 +476,7 @@
       {
         "question": "Dua suku selanjutnya dari deretan bilangan 1, 3, 6, 10, 15, 21, 28, ... yaitu ...",
         "answer": "36, 46",
-        "options:": {
+        "options": {
           "a": "35, 45",
           "b": "35, 44",
           "c": "36, 46",
@@ -486,7 +486,7 @@
       {
         "question": "Dua suku selanjutnya dari deretan bilangan 1, 3, 8, 16, 27, 41, ... yaitu ...",
         "answer": "58, 78",
-        "options:": {
+        "options": {
           "a": "58, 78",
           "b": "57, 79",
           "c": "57, 79",
@@ -496,7 +496,7 @@
       {
         "question": "Cobalah untuk tentukan tiga suku selanjutnya dari pola bilangan 2, 3, 5, 8, ..., ..., ...",
         "answer": "13, 21, 34",
-        "options:": {
+        "options": {
           "a": "9, 11, 15",
           "b": "12, 17, 24",
           "c": "13, 21, 34",
@@ -506,7 +506,7 @@
       {
         "question": "Cobalah untuk tentukan satu huruf yang hilang pada pola A, B, D, ..., G, J, J, M, N.",
         "answer": "F",
-        "options:": {
+        "options": {
           "a": "F",
           "b": "G",
           "c": "E",
@@ -516,7 +516,7 @@
       {
         "question": "Tentukan dua suku yang tidak diketahui dari pola: 2, -1, 3, 4, 1, 5, 6, 3, 7, ..., ...",
         "answer": "8, 5",
-        "options:": {
+        "options": {
           "a": "11, 8",
           "b": "8, 5",
           "c": "10, 7",
@@ -526,7 +526,7 @@
       {
         "question": "Gradien garis yang melalui titik A(-2, -1) dan B(1,3) adalah ...",
         "answer": "4/3",
-        "options:": {
+        "options": {
           "a": "-4/3",
           "b": "-3/4",
           "c": "3/4",
@@ -536,7 +536,7 @@
       {
         "question": "Koordinat titik A berjarak 5 satuan terhadap sumbu X dan berjarak 7 satuan terhadap sumbu Y. Koordinat titik A adalah ...",
         "answer": "(-5,-7)",
-        "options:": {
+        "options": {
           "a": "(7,-5)",
           "b": "(5,7)",
           "c": "(5,-7)",
@@ -546,7 +546,7 @@
       {
         "question": "A (2,2), B(-2,1), C(-3,-3), D(1,-2).",
         "answer": "titik A dan titik D",
-        "options:": {
+        "options": {
           "a": "titik A dan titik B",
           "b": "titik A dan titik C",
           "c": "titik A dan titik D",
@@ -556,7 +556,7 @@
       {
         "question": "Diantara garis berikut sejajar dengan garis dengan persamaan 6x - 12y + 13 = 0, kecuali ...",
         "answer": "4x + 8y - 3 = 0",
-        "options:": {
+        "options": {
           "a": "2x - 4y - 1 = 0",
           "b": "3x - 4y - 5 = 0",
           "c": "4x + 8y - 3 = 0",
@@ -566,7 +566,7 @@
       {
         "question": "Persamaan garis yang melalui titik P(4, -5) dan Q(2, 1) adalah ...",
         "answer": "3x + y - 7 = 0",
-        "options:": {
+        "options": {
           "a": "x - 3y + 11 = 0",
           "b": "x - 3y - 11 = 0",
           "c": "3x + y + 7 = 0",
