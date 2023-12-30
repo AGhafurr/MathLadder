@@ -18,7 +18,7 @@ class AuthController extends GetxController {
   }
 
   void initSocket() {
-    socket = IO.io('http://$ip', <String, dynamic>{
+    socket = IO.io('$ip', <String, dynamic>{
       'autoConnect': false,
       'transports': ['websocket'],
     });
@@ -52,7 +52,7 @@ class AuthController extends GetxController {
     var headers = {'Content-Type': 'application/json'};
     var data = json.encode({"id": id});
     var response = await dio.request(
-      'http://$ip:3000/api/user/me',
+      '$ip:3000/api/user/me',
       options: Options(
         method: 'POST',
         headers: headers,
@@ -80,7 +80,7 @@ class AuthController extends GetxController {
       "password": password,
     });
     var response = await dio.request(
-      'http://$ip/api/auth/sign-up',
+      '$ip/api/auth/sign-up',
       options: Options(
         method: 'POST',
         headers: headers,
@@ -105,7 +105,7 @@ class AuthController extends GetxController {
       "password": password,
     });
     var response = await dio.request(
-      'http://$ip/api/auth/sign-in',
+      '$ip/api/auth/sign-in',
       options: Options(
         method: 'POST',
         headers: headers,
@@ -122,7 +122,7 @@ class AuthController extends GetxController {
 
   Future<void> signOut() async {
     var response = await dio.request(
-      'http://$ip/api/auth/sign-out',
+      '$ip/api/auth/sign-out',
       options: Options(
         method: 'POST',
       ),

@@ -14,7 +14,7 @@ class PointController extends GetxController {
     var headers = {'Content-Type': 'application/json'};
     var data = json.encode({"id": id, "point": point});
     var response = await dio.request(
-      'http://$ip/api/point/update-point',
+      '$ip/api/point/update-point',
       options: Options(
         method: 'POST',
         headers: headers,

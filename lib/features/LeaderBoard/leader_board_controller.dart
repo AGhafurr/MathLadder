@@ -16,7 +16,7 @@ class LeaderBoardController extends GetxController {
 
   Future<void> getLeaderBoardData() async {
     var response = await dio.request(
-      'http://$ip/api/point/leader-board',
+      '$ip/api/point/leader-board',
       options: Options(
         method: 'GET',
       ),
