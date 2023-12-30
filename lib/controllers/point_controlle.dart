@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 
 class PointController extends GetxController {
-  String ip = '192.168.1.79';
+  String ip = '192.168.1.1';
   final dio = Dio();
 
   Future<void> updateUserPoint({
