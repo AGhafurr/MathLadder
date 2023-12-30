@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 
 class PointController extends GetxController {
-  String ip = '192.168.1.1';
+  String ip = 'https://math-ladder-api-39c64285572b.herokuapp.com';
   final dio = Dio();
 
   Future<void> updateUserPoint({
@@ -14,7 +14,7 @@ class PointController extends GetxController {
     var headers = {'Content-Type': 'application/json'};
     var data = json.encode({"id": id, "point": point});
     var response = await dio.request(
-      'http://$ip:3000/api/point/update-point',
+      'http://$ip/api/point/update-point',
       options: Options(
         method: 'POST',
         headers: headers,

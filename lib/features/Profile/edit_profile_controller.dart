@@ -7,7 +7,7 @@ import 'package:get/get.dart' hide Response, FormData, MultipartFile;
 import 'package:image_picker/image_picker.dart';
 
 class EditProfileController extends GetxController {
-  String ip = '192.168.1.79';
+  String ip = 'https://math-ladder-api-39c64285572b.herokuapp.com';
   final dio = Dio();
   Rx<File?> image = Rx<File?>(null);
   XFile? pick;
@@ -49,7 +49,7 @@ class EditProfileController extends GetxController {
     });
 
     var response = await dio.request(
-      'http://$ip:3000/api/user/update-profile-picture',
+      'http://$ip/api/user/update-profile-picture',
       options: Options(
         method: 'POST',
       ),
