@@ -105,7 +105,8 @@ class _LeaderBoardState extends State<LeaderBoard> {
                             }),
                             const SizedBox(height: 8),
                             const CircleAvatar(
-                              backgroundImage: NetworkImage('url_to_image_2'),
+                              backgroundImage: NetworkImage(
+                                  'https://images.pexels.com/photos/8998295/pexels-photo-8998295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
                               radius: 40,
                             ),
                             const SizedBox(height: 10),
@@ -139,8 +140,8 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                 }),
                                 const SizedBox(height: 8),
                                 const CircleAvatar(
-                                  backgroundImage:
-                                      NetworkImage('url_to_image_1'),
+                                  backgroundImage: NetworkImage(
+                                      'https://images.pexels.com/photos/8998295/pexels-photo-8998295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
                                   radius: 40,
                                 ),
                                 const SizedBox(height: 10),
@@ -173,8 +174,8 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                 }),
                                 const SizedBox(height: 8),
                                 const CircleAvatar(
-                                  backgroundImage:
-                                      NetworkImage('url_to_image_3'),
+                                  backgroundImage: NetworkImage(
+                                      'https://images.pexels.com/photos/8998295/pexels-photo-8998295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
                                   radius: 40,
                                 ),
                                 const SizedBox(height: 10),
