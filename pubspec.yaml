@@ -38,6 +38,7 @@ dependencies:
   dio: ^5.4.0
   socket_io_client: ^2.0.3+1
   image_picker: ^1.0.4
+  supabase_flutter: ^2.0.2
 
 dev_dependencies:
   flutter_test:

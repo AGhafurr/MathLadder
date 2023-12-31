@@ -1,70 +1,66 @@
-import 'dart:convert';
+import 'dart:async';
 
 import 'package:get/get.dart';
-import 'package:socket_io_client/socket_io_client.dart' as IO;
-import 'package:dio/dio.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+import '../features/home/navbar.dart';
+import '../features/auth/sign_in/sign_in_screen.dart';
 
 class AuthController extends GetxController {
-  String ip = 'https://math-ladder-api-39c64285572b.herokuapp.com';
-  late IO.Socket socket;
-  final dio = Dio();
-  final isLoggedIn = false.obs;
+  final supabase = Supabase.instance.client;
+  final authChangeEvent = Rx<AuthChangeEvent?>(null);
+  final session = Rx<Session?>(null);
+  late StreamSubscription<AuthState> authSubscription;
   final user = {}.obs;
 
   @override
   void onInit() {
     super.onInit();
-    initSocket();
+    initAuthListener();
   }
 
-  void initSocket() {
-    socket = IO.io('$ip', <String, dynamic>{
-      'autoConnect': false,
-      'transports': ['websocket'],
-    });
-
-    socket.on('INITIAL_SESSION', (data) {
-      print('INITIAL_SESSION : $data');
-      if (data['session'] != null) {
-        isLoggedIn.value = true;
-        getUserData(id: data['session']['user']['id']);
+  void initAuthListener() {
+    authSubscription = supabase.auth.onAuthStateChange.listen((data) async {
+      try {
+        final AuthChangeEvent event = data.event;
+        if (event == AuthChangeEvent.initialSession) {
+          session.value = data.session;
+          if (session.value == null) return;
+          user.value = await getUserData(id: data.session!.user.id);
+          Get.offAll(() {
+            return const Navbar();
+          });
+        }
+        if (event == AuthChangeEvent.signedIn) {
+          session.value = data.session;
+          if (session.value == null) return;
+          user.value = await getUserData(id: data.session!.user.id);
+          Get.offAll(() {
+            return const Navbar();
+          });
+        }
+        if (event == AuthChangeEvent.signedOut) {
+          if (session.value == null) return;
+          session.value = data.session;
+          user.value = {};
+          Get.offAll(() {
+            return const SignInScreen();
+          });
+        }
+      } catch (error) {
+        rethrow;
       }
     });
-
-    socket.on('SIGNED_IN', (data) {
-      print('SIGNED_IN : $data');
-      if (data['session'] != null) {
-        isLoggedIn.value = true;
-        getUserData(id: data['session']['user']['id']);
-      }
-    });
-
-    socket.on('SIGNED_OUT', (data) {
-      print('SIGNED_OUT : $data');
-      isLoggedIn.value = false;
-      user.value = {};
-    });
-
-    socket.connect();
   }
 
-  Future<void> getUserData({required String id}) async {
-    var headers = {'Content-Type': 'application/json'};
-    var data = json.encode({"id": id});
-    var response = await dio.request(
-      '$ip:3000/api/user/me',
-      options: Options(
-        method: 'POST',
-        headers: headers,
-      ),
-      data: data,
-    );
-
-    if (response.statusCode == 200) {
-      user.value = response.data[0];
-      print(user);
-    } else {
-      print(response.statusMessage);
+  Future<Map> getUserData({required String id}) async {
+    try {
+      final data =
+          await supabase.from('users').select('*, points(*)').eq('id', id);
+      print(data);
+      return data[0];
+    } catch (error) {
+      rethrow;
     }
   }
 
@@ -73,25 +69,21 @@ class AuthController extends GetxController {
     required String email,
     required String password,
   }) async {
-    var headers = {'Content-Type': 'application/json'};
-    var data = json.encode({
-      "username": username,
-      "email": email,
-      "password": password,
-    });
-    var response = await dio.request(
-      '$ip/api/auth/sign-up',
-      options: Options(
-        method: 'POST',
-        headers: headers,
-      ),
-      data: data,
-    );
-
-    if (response.statusCode == 200) {
-      print(json.encode(response.data));
-    } else {
-      print(response.statusMessage);
+    try {
+      final data = await supabase.auth.signUp(
+        email: email,
+        password: password,
+      );
+      await supabase.from('users').insert({
+        'id': data.session?.user.id,
+        'username': username,
+        'email': data.session?.user.email,
+      });
+      await supabase.from('points').insert({
+        'id': data.session?.user.id,
+      });
+    } catch (error) {
+      print(error);
     }
   }
 
@@ -99,45 +91,27 @@ class AuthController extends GetxController {
     required String email,
     required String password,
   }) async {
-    var headers = {'Content-Type': 'application/json'};
-    var data = json.encode({
-      "email": email,
-      "password": password,
-    });
-    var response = await dio.request(
-      '$ip/api/auth/sign-in',
-      options: Options(
-        method: 'POST',
-        headers: headers,
-      ),
-      data: data,
-    );
-
-    if (response.statusCode == 200) {
-      print(json.encode(response.data));
-    } else {
-      print(response.statusMessage);
+    try {
+      await supabase.auth.signInWithPassword(
+        email: email,
+        password: password,
+      );
+    } catch (error) {
+      print(error);
     }
   }
 
   Future<void> signOut() async {
-    var response = await dio.request(
-      '$ip/api/auth/sign-out',
-      options: Options(
-        method: 'POST',
-      ),
-    );
-
-    if (response.statusCode == 200) {
-      print(json.encode(response.data));
-    } else {
-      print(response.statusMessage);
+    try {
+      await supabase.auth.signOut();
+    } catch (error) {
+      print(error);
     }
   }
 
   @override
   void onClose() {
-    socket.disconnect();
     super.onClose();
+    authSubscription.cancel();
   }
 }
