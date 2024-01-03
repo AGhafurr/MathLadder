@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 
 import '../../controllers/auth_controller.dart';
 import '../../features/gamePage/game_page.dart';
-import '../gamePage/winner_page.dart';
 import '../Information/information_page.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -219,28 +218,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       _buildCustomButton(context, "NOVICE",
                           const GamePage(dificuty: "Beginner")),
                       const SizedBox(height: 20),
-                      _buildCustomButton(context, "LEARNER",
+                      _buildCustomButton(context, "INTERMEDIATE",
                           const GamePage(dificuty: "Intermediate")),
                       const SizedBox(height: 20),
-                      _buildCustomButton(context, "APPRENTICE",
-                          const GamePage(dificuty: "Advanced")),
-                      const SizedBox(height: 20),
-                      _buildCustomButton(context, "INTERMEDIATE",
-                          const GamePage(dificuty: "Advanced")),
-                      const SizedBox(height: 20),
-                      _buildCustomButton(context, "PROFICIENCE",
-                          const GamePage(dificuty: "Advanced")),
-                      const SizedBox(height: 20),
                       _buildCustomButton(context, "ADVANCED",
-                          const GamePage(dificuty: "Advanced")),
-                      const SizedBox(height: 20),
-                      _buildCustomButton(context, "EXPERT",
-                          const GamePage(dificuty: "Advanced")),
-                      const SizedBox(height: 20),
-                      _buildCustomButton(context, "MASTER",
-                          const GamePage(dificuty: "Advanced")),
-                      const SizedBox(height: 20),
-                      _buildCustomButton(context, "VIRTUOS",
                           const GamePage(dificuty: "Advanced")),
                       const SizedBox(height: 20),
                     ],
