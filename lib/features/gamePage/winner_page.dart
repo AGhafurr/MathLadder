@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../home/navbar.dart';
+import 'package:math_ladder/controllers/auth_controller.dart';
 
 class WinnerPage extends StatefulWidget {
-  const WinnerPage({super.key});
+  final int point;
+  const WinnerPage({super.key, required this.point});
 
   @override
   State<WinnerPage> createState() => _WinnerPageState();
 }
 
 class _WinnerPageState extends State<WinnerPage> {
+  final authController = Get.put(AuthController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,9 +93,9 @@ class _WinnerPageState extends State<WinnerPage> {
                                       "assets/images/point.png",
                                       height: 30,
                                     ),
-                                    const Text(
-                                      "45",
-                                      style: TextStyle(
+                                    Text(
+                                      "${widget.point}",
+                                      style: const TextStyle(
                                         color: Colors.black,
                                         fontSize: 20,
                                         fontFamily: 'Poppins',

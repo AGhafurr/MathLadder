@@ -521,7 +521,6 @@ class _GamePageState extends State<GamePage> {
   }
 
   void rollDice() {
-    playMusic2();
     setState(() {
       if (!diceClicked) {
         diceClicked = true;
@@ -573,7 +572,8 @@ class _GamePageState extends State<GamePage> {
               resetGame();
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const WinnerPage()),
+                MaterialPageRoute(
+                    builder: (context) => WinnerPage(point: point)),
               );
             },
             style: ButtonStyle(
