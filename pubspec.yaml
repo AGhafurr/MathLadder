@@ -86,6 +86,9 @@ flutter:
     - assets/datas/questions.json
     - assets/sounds/wrong answer.mp3
     - assets/sounds/pop up quest.mp3
+    - assets/sounds/Dice Roll Sound Effects.mp3
+    - assets/sounds/right answer.mp3
+    - assets/sounds/Sound effect yeay.mp3
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

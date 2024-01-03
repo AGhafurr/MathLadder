@@ -51,7 +51,27 @@ class _GamePageState extends State<GamePage> {
   }
 
   void playMusic() async {
-    final duration = await player.setAsset('assets/sounds/pop up quest.mp3');
+    player.setAsset('assets/sounds/pop up quest.mp3');
+    player.play();
+  }
+
+  void playMusic1() async {
+    player.setAsset('assets/sounds/wrong answer.mp3');
+    player.play();
+  }
+
+  void playMusic2() async {
+    player.setAsset('assets/sounds/Dice Roll Sound Effects.mp3');
+    player.play();
+  }
+
+  void playMusic3() async {
+    player.setAsset('assets/sounds/right answer.mp3');
+    player.play();
+  }
+
+  void playMusic4() async {
+    player.setAsset('assets/sounds/Sound effect yeay.mp3');
     player.play();
   }
 
@@ -128,6 +148,7 @@ class _GamePageState extends State<GamePage> {
                     yourAnswer = loadedQuestions[index]['options']['a'];
                   });
                   if (yourAnswer == loadedQuestions[index]['answer']) {
+                    playMusic3();
                     showDialog(
                       context: context,
                       builder: (context) {
@@ -154,6 +175,7 @@ class _GamePageState extends State<GamePage> {
                       pawnPosition = (pawnPosition + diceNumber) % 64;
                     });
                   } else {
+                    playMusic1();
                     showDialog(
                       context: context,
                       builder: (context) {
@@ -214,6 +236,7 @@ class _GamePageState extends State<GamePage> {
                     yourAnswer = loadedQuestions[index]['options']['b'];
                   });
                   if (yourAnswer == loadedQuestions[index]['answer']) {
+                    playMusic3();
                     showDialog(
                       context: context,
                       builder: (context) {
@@ -240,6 +263,7 @@ class _GamePageState extends State<GamePage> {
                       pawnPosition = (pawnPosition + diceNumber) % 64;
                     });
                   } else {
+                    playMusic1();
                     showDialog(
                       context: context,
                       builder: (context) {
@@ -312,6 +336,7 @@ class _GamePageState extends State<GamePage> {
                     yourAnswer = loadedQuestions[index]['options']['c'];
                   });
                   if (yourAnswer == loadedQuestions[index]['answer']) {
+                    playMusic3();
                     showDialog(
                       context: context,
                       builder: (context) {
@@ -343,6 +368,7 @@ class _GamePageState extends State<GamePage> {
                       pawnPosition = (pawnPosition + diceNumber) % 64;
                     });
                   } else {
+                    playMusic1();
                     showDialog(
                       context: context,
                       builder: (context) {
@@ -401,6 +427,7 @@ class _GamePageState extends State<GamePage> {
                     yourAnswer = loadedQuestions[index]['options']['d'];
                   });
                   if (yourAnswer == loadedQuestions[index]['answer']) {
+                    playMusic3();
                     showDialog(
                       context: context,
                       builder: (context) {
@@ -427,6 +454,7 @@ class _GamePageState extends State<GamePage> {
                       pawnPosition = (pawnPosition + diceNumber) % 64;
                     });
                   } else {
+                    playMusic1();
                     showDialog(
                       context: context,
                       builder: (context) {
@@ -493,6 +521,7 @@ class _GamePageState extends State<GamePage> {
   }
 
   void rollDice() {
+    playMusic2();
     setState(() {
       if (!diceClicked) {
         diceClicked = true;
@@ -519,6 +548,7 @@ class _GamePageState extends State<GamePage> {
       }
 
       if (questionBoxes.contains(pawnPosition)) {
+        playMusic();
         showQuestionDialog(pawnPosition);
       }
     });
@@ -529,6 +559,7 @@ class _GamePageState extends State<GamePage> {
       id: authController.user['id'],
       point: point,
     );
+    playMusic4();
 
     showDialog(
       context: context,
