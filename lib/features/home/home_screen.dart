@@ -108,9 +108,9 @@ class _HomeScreenState extends State<HomeScreen> {
             color: Colors.black,
           ),
         ],
-        title: const Text(
-          "Hai Username",
-          style: TextStyle(
+        title: Text(
+          "Hai ${authController.user['username']}",
+          style: const TextStyle(
             color: Colors.black,
             fontSize: 13,
             fontFamily: 'Poppins',

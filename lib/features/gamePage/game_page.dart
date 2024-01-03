@@ -8,6 +8,7 @@ import 'package:math_ladder/controllers/point_controlle.dart';
 import 'dart:async';
 import 'dart:math';
 import 'package:math_ladder/features/gamePage/winner_page.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class GamePage extends StatefulWidget {
   final String dificuty;
@@ -28,6 +29,8 @@ class GamePage extends StatefulWidget {
 class _GamePageState extends State<GamePage> {
   final authController = Get.put(AuthController());
   final pointController = Get.put(PointController());
+  AudioCache audioCache = AudioCache();
+
   var loadedQuestions = [];
   int diceNumber = 1;
   int pawnPosition = 0;
@@ -45,6 +48,11 @@ class _GamePageState extends State<GamePage> {
     super.initState();
     generateQuestionBoxes();
     loadQuestions();
+  }
+
+  void playMusic(String musicFileName) async {
+    await audioCache.play('sounds/pop up quest.mp3');
+    print("Sound play");
   }
 
   int generateRandomNumber() {
@@ -76,7 +84,6 @@ class _GamePageState extends State<GamePage> {
           randomBox != 1 &&
           randomBox != 2 &&
           randomBox != 3) {
-        // Hindari kotak 3
         questionBoxes.add(randomBox);
       }
     }
@@ -84,7 +91,7 @@ class _GamePageState extends State<GamePage> {
 
   void showQuestionDialog(int boxNumber) {
     int index = generateRandomNumber();
-
+    playMusic('pop up quest');
     showDialog(
       context: context,
       barrierDismissible: false,

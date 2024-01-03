@@ -39,6 +39,7 @@ dependencies:
   socket_io_client: ^2.0.3+1
   image_picker: ^1.0.4
   supabase_flutter: ^2.0.2
+  audioplayers: ^5.2.1
 
 dev_dependencies:
   flutter_test:
@@ -82,6 +83,8 @@ flutter:
     - assets/images/Logo.png
     - assets/images/camera.png
     - assets/datas/questions.json
+    - assets/sounds/wrong answer.mp3
+    - assets/sounds/pop up quest.mp3
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
