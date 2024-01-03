@@ -215,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                       const SizedBox(height: 10),
-                      _buildCustomButton(context, "NOVICE",
+                      _buildCustomButton(context, "BEGINNER",
                           const GamePage(dificuty: "Beginner")),
                       const SizedBox(height: 20),
                       _buildCustomButton(context, "INTERMEDIATE",

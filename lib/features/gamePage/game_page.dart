@@ -123,17 +123,19 @@ class _GamePageState extends State<GamePage> {
             fontFamily: 'Poppins',
           ),
         ),
-        content: Container(
-          decoration: const BoxDecoration(
-              color: Color(0xffFE9696),
-              borderRadius: BorderRadius.all(Radius.circular(10))),
-          padding: const EdgeInsets.all(15),
-          child: Text(
-            '${loadedQuestions[index]['question']}',
-            style: const TextStyle(
-              fontSize: 24,
-              color: Colors.white,
-              fontFamily: 'Poppins',
+        content: SingleChildScrollView(
+          child: Container(
+            decoration: const BoxDecoration(
+                color: Color(0xffFE9696),
+                borderRadius: BorderRadius.all(Radius.circular(10))),
+            padding: const EdgeInsets.all(15),
+            child: Text(
+              '${loadedQuestions[index]['question']}',
+              style: const TextStyle(
+                fontSize: 24,
+                color: Colors.white,
+                fontFamily: 'Poppins',
+              ),
             ),
           ),
         ),
