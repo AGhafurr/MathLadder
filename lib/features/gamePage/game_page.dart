@@ -3,12 +3,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:just_audio/just_audio.dart';
 import 'package:math_ladder/controllers/auth_controller.dart';
 import 'package:math_ladder/controllers/point_controlle.dart';
 import 'dart:async';
 import 'dart:math';
 import 'package:math_ladder/features/gamePage/winner_page.dart';
-import 'package:audioplayers/audioplayers.dart';
 
 class GamePage extends StatefulWidget {
   final String dificuty;
@@ -29,7 +29,7 @@ class GamePage extends StatefulWidget {
 class _GamePageState extends State<GamePage> {
   final authController = Get.put(AuthController());
   final pointController = Get.put(PointController());
-  AudioCache audioCache = AudioCache();
+  final player = AudioPlayer();
 
   var loadedQuestions = [];
   int diceNumber = 1;
@@ -50,9 +50,9 @@ class _GamePageState extends State<GamePage> {
     loadQuestions();
   }
 
-  void playMusic(String musicFileName) async {
-    await audioCache.play('sounds/pop up quest.mp3');
-    print("Sound play");
+  void playMusic() async {
+    final duration = await player.setAsset('assets/sounds/pop up quest.mp3');
+    player.play();
   }
 
   int generateRandomNumber() {
@@ -91,7 +91,7 @@ class _GamePageState extends State<GamePage> {
 
   void showQuestionDialog(int boxNumber) {
     int index = generateRandomNumber();
-    playMusic('pop up quest');
+    playMusic();
     showDialog(
       context: context,
       barrierDismissible: false,
