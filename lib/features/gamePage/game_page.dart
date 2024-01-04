@@ -90,7 +90,6 @@ class _GamePageState extends State<GamePage> {
     setState(() {
       loadedQuestions = selectedDificulty;
     });
-    print(loadedQuestions);
   }
 
   void generateQuestionBoxes() {
@@ -172,7 +171,6 @@ class _GamePageState extends State<GamePage> {
                     setState(() {
                       point += 40;
                     });
-                    print(point);
                     setState(() {
                       pawnPosition = (pawnPosition + diceNumber) % 64;
                     });
@@ -260,7 +258,6 @@ class _GamePageState extends State<GamePage> {
                     setState(() {
                       point += 40;
                     });
-                    print(point);
                     setState(() {
                       pawnPosition = (pawnPosition + diceNumber) % 64;
                     });
@@ -365,7 +362,6 @@ class _GamePageState extends State<GamePage> {
                     setState(() {
                       point += 40;
                     });
-                    print(point);
                     setState(() {
                       pawnPosition = (pawnPosition + diceNumber) % 64;
                     });
@@ -451,7 +447,6 @@ class _GamePageState extends State<GamePage> {
                     setState(() {
                       point += 40;
                     });
-                    print(point);
                     setState(() {
                       pawnPosition = (pawnPosition + diceNumber) % 64;
                     });
@@ -556,6 +551,49 @@ class _GamePageState extends State<GamePage> {
   }
 
   void showGameEndDialog(String winnerMessage) {
+    if (timerValue <= 180) {
+      if (widget.dificuty == 'Beginner') {
+        setState(() {
+          point += 40;
+        });
+      } else if (widget.dificuty == 'Intermediate') {
+        setState(() {
+          point += 50;
+        });
+      } else if (widget.dificuty == 'Advanced') {
+        setState(() {
+          point += 60;
+        });
+      }
+    } else if (timerValue <= 500) {
+      if (widget.dificuty == 'Beginner') {
+        setState(() {
+          point += 30;
+        });
+      } else if (widget.dificuty == 'Intermediate') {
+        setState(() {
+          point += 40;
+        });
+      } else if (widget.dificuty == 'Advanced') {
+        setState(() {
+          point += 50;
+        });
+      }
+    } else if (timerValue <= 420) {
+      if (widget.dificuty == 'Beginner') {
+        setState(() {
+          point += 20;
+        });
+      } else if (widget.dificuty == 'Intermediate') {
+        setState(() {
+          point += 30;
+        });
+      } else if (widget.dificuty == 'Advanced') {
+        setState(() {
+          point += 40;
+        });
+      }
+    }
     pointController.updateUserPoint(
       id: authController.user['id'],
       point: point,
@@ -571,11 +609,14 @@ class _GamePageState extends State<GamePage> {
         actions: [
           TextButton(
             onPressed: () {
-              resetGame();
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => WinnerPage(point: point)),
+                  builder: (context) => WinnerPage(
+                    point: point,
+                    timerValue: timerValue,
+                  ),
+                ),
               );
             },
             style: ButtonStyle(
@@ -618,14 +659,6 @@ class _GamePageState extends State<GamePage> {
       timerValue = 0;
     });
     _timer.cancel();
-    Navigator.pushReplacement(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const GamePage(
-          dificuty: "Beginner",
-        ),
-      ),
-    );
   }
 
   @override
@@ -689,9 +722,9 @@ class _GamePageState extends State<GamePage> {
                           ),
                         ),
                       ),
-                      child: const Text(
-                        '365',
-                        style: TextStyle(
+                      child: Text(
+                        '$point',
+                        style: const TextStyle(
                           fontSize: 45,
                           color: Colors.red,
                           fontFamily: 'Unlock',

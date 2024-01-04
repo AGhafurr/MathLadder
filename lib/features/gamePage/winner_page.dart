@@ -5,7 +5,13 @@ import 'package:math_ladder/controllers/auth_controller.dart';
 
 class WinnerPage extends StatefulWidget {
   final int point;
-  const WinnerPage({super.key, required this.point});
+  final int timerValue;
+
+  const WinnerPage({
+    super.key,
+    required this.point,
+    required this.timerValue,
+  });
 
   @override
   State<WinnerPage> createState() => _WinnerPageState();
@@ -13,6 +19,12 @@ class WinnerPage extends StatefulWidget {
 
 class _WinnerPageState extends State<WinnerPage> {
   final authController = Get.put(AuthController());
+
+  String getTimerText(int seconds) {
+    int minutes = seconds ~/ 60;
+    int remainingSeconds = seconds % 60;
+    return '$minutes:$remainingSeconds ';
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -141,9 +153,9 @@ class _WinnerPageState extends State<WinnerPage> {
                                       height: 30,
                                     ),
                                     const SizedBox(width: 5),
-                                    const Text(
-                                      "2:26",
-                                      style: TextStyle(
+                                    Text(
+                                      getTimerText(widget.timerValue),
+                                      style: const TextStyle(
                                         color: Colors.black,
                                         fontSize: 20,
                                         fontFamily: 'Poppins',

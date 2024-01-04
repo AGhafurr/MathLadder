@@ -57,7 +57,6 @@ class AuthController extends GetxController {
     try {
       final data =
           await supabase.from('users').select('*, points(*)').eq('id', id);
-      print(data);
       return data[0];
     } catch (error) {
       rethrow;
@@ -83,7 +82,7 @@ class AuthController extends GetxController {
         'id': data.session?.user.id,
       });
     } catch (error) {
-      print(error);
+      rethrow;
     }
   }
 
@@ -97,7 +96,7 @@ class AuthController extends GetxController {
         password: password,
       );
     } catch (error) {
-      print(error);
+      rethrow;
     }
   }
 
@@ -105,7 +104,7 @@ class AuthController extends GetxController {
     try {
       await supabase.auth.signOut();
     } catch (error) {
-      print(error);
+      rethrow;
     }
   }
 
