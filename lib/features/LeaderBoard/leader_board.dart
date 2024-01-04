@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'leader_board_controller.dart';
+import '../../controllers/point_controlle.dart';
 import '../Information/information_page.dart';
 
 class LeaderBoard extends StatefulWidget {
@@ -11,7 +11,7 @@ class LeaderBoard extends StatefulWidget {
 }
 
 class _LeaderBoardState extends State<LeaderBoard> {
-  final leaderBoardController = Get.put(LeaderBoardController());
+  final pointController = Get.put(PointController());
   final _searchController = TextEditingController();
 
   @override
@@ -92,12 +92,10 @@ class _LeaderBoardState extends State<LeaderBoard> {
                           children: [
                             const SizedBox(height: 20),
                             Obx(() {
-                              return leaderBoardController.leaderBoard[0]
-                                          ['id'] ==
-                                      ''
+                              return pointController.leaderBoard[0]['id'] == ''
                                   ? const Text('0')
                                   : Text(
-                                      '${leaderBoardController.leaderBoard[0]['users']['username']}',
+                                      '${pointController.leaderBoard[0]['users']['username']}',
                                       style: const TextStyle(
                                           fontSize: 18,
                                           fontWeight: FontWeight.bold),
@@ -111,12 +109,10 @@ class _LeaderBoardState extends State<LeaderBoard> {
                             ),
                             const SizedBox(height: 10),
                             Obx(() {
-                              return leaderBoardController.leaderBoard[0]
-                                          ['id'] ==
-                                      ''
+                              return pointController.leaderBoard[0]['id'] == ''
                                   ? const Text('0')
                                   : Text(
-                                      '${leaderBoardController.leaderBoard[0]['point']}');
+                                      '${pointController.leaderBoard[0]['point']}');
                             }),
                           ],
                         ),
@@ -127,12 +123,11 @@ class _LeaderBoardState extends State<LeaderBoard> {
                             Column(
                               children: [
                                 Obx(() {
-                                  return leaderBoardController.leaderBoard[1]
-                                              ['id'] ==
+                                  return pointController.leaderBoard[1]['id'] ==
                                           ''
                                       ? const Text('username')
                                       : Text(
-                                          '${leaderBoardController.leaderBoard[1]['users']['username']}',
+                                          '${pointController.leaderBoard[1]['users']['username']}',
                                           style: const TextStyle(
                                               fontSize: 20,
                                               fontWeight: FontWeight.bold),
@@ -146,12 +141,11 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                 ),
                                 const SizedBox(height: 10),
                                 Obx(() {
-                                  return leaderBoardController.leaderBoard[1]
-                                              ['id'] ==
+                                  return pointController.leaderBoard[1]['id'] ==
                                           ''
                                       ? const Text('0')
                                       : Text(
-                                          '${leaderBoardController.leaderBoard[1]['point']}');
+                                          '${pointController.leaderBoard[1]['point']}');
                                 }),
                               ],
                             ),
@@ -161,12 +155,11 @@ class _LeaderBoardState extends State<LeaderBoard> {
                               children: [
                                 const SizedBox(height: 40),
                                 Obx(() {
-                                  return leaderBoardController.leaderBoard[2]
-                                              ['id'] ==
+                                  return pointController.leaderBoard[2]['id'] ==
                                           ''
                                       ? const Text('')
                                       : Text(
-                                          '${leaderBoardController.leaderBoard[2]['users']['username']}',
+                                          '${pointController.leaderBoard[2]['users']['username']}',
                                           style: const TextStyle(
                                               fontSize: 18,
                                               fontWeight: FontWeight.bold),
@@ -180,12 +173,11 @@ class _LeaderBoardState extends State<LeaderBoard> {
                                 ),
                                 const SizedBox(height: 10),
                                 Obx(() {
-                                  return leaderBoardController.leaderBoard[2]
-                                              ['id'] ==
+                                  return pointController.leaderBoard[2]['id'] ==
                                           ''
                                       ? const Text('0')
                                       : Text(
-                                          '${leaderBoardController.leaderBoard[2]['point']}',
+                                          '${pointController.leaderBoard[2]['point']}',
                                         );
                                 }),
                               ],
